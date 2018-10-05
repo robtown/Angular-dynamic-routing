@@ -1,0 +1,40 @@
+@import '/variables/styles-variables';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+.test{
+    color: $lt-blue;
+    display:table;
+    width:100%;
+    
+    
+}
+
+header{
+    background: url('../images/USBank_Elavon_Logo_3C.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem 2rem;
+    
+    .btn{
+        border: thin solid $blue;
+        border-radius: 6px;
+       
+        color: $blue;
+        padding: .6rem 1.7rem;
+        float:left;
+    }
+
+
+}
+
+.bodycontent{
+    -webkit-box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
+box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
+
+        .questions-body{
+            text-align:center;
+            color: $blue;
+        }
+}
