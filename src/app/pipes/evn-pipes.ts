@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Product } from '../models/product';
+import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
 
 @Pipe({ name: 'filterProducts', pure: false })
 export class FilterProducts implements PipeTransform {
@@ -25,30 +26,30 @@ export class FilterProducts implements PipeTransform {
                 np.sortOrder = element.sortOrder;
                 ret.push(np);
          }
-        // let tempElement = element.tags.sort().join();
-        // let tempTags = tags.sort().join();
-        //  console.log(tempElement);
-        //  console.log(tempTags);
-        // if( tempElement.indexOf(tempTags) > -1){
-        //     let np: Product = new Product();
-        //     np.product = element.product;
-        //     np.tags = element.tags;
-        //     np.sortOrder = element.sortOrder;
-        //     ret.push(np);
-        // }
-
-        // var result = element.tags.filter(function(item){ return tags.indexOf(item) > -1});
-        // if(result.length > 0){
-        //     let np: Product = new Product();
-        //     np.product = element.product;
-        //     np.tags = element.tags;
-        //     np.sortOrder = element.sortOrder;
-        //     ret.push(np);
-        // }
+       
     });
    //return data.filter(item => tags.some(f => f == item.tags)); //change the condition as you need
     //return data.filter(item => item.tags)
     return ret;
 }
 }
+
+@Pipe({
+    name: 'safe'
+  })
+  export class SafePipe implements PipeTransform {
+  
+    constructor(protected sanitizer: DomSanitizer) {}
+   
+   public transform(value: any, type: string): SafeHtml | SafeStyle | SafeUrl | SafeResourceUrl {
+      switch (type) {
+              case 'html': return this.sanitizer.bypassSecurityTrustHtml(value);
+              case 'style': return this.sanitizer.bypassSecurityTrustStyle(value);
+              //case 'script': return this.sanitizer.bypassSecurityTrustScript(value);
+              case 'url': return this.sanitizer.bypassSecurityTrustUrl(value);
+              case 'resourceUrl': return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+              default: throw new Error(`Invalid safe type specified: ${type}`);
+          }
+    }
+  }
 

@@ -21,9 +21,15 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/assets/style/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/style/styles.scss",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/@fortawesome/fontawesome-pro/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/select2/dist/js/select2.full.js"
+            ]
           },
           "configurations": {
             "production": {

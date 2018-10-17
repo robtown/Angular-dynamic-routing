@@ -8,3 +8,9 @@ export class Question {
       name: any;
       value: any;
   }
+
+  export class Select2Question {
+    question: any;
+    answers: any = [];
+    sortOrder: any;
+  }
