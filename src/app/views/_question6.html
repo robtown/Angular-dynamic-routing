@@ -3,13 +3,13 @@
         <div *ngIf="loaded" class="questions-wrapper">
             <div class="questions-counter">Question 6 of {{ questionsService.questions.length }}</div>
          <p>{{ questionsService.questions[5].question }}</p>
-            <div class="row buttons-wrapper">
-             <div class="col-sm-2"></div>
+            <div class="row buttons-wrapper" *ngFor=" let button of questionsService.questions[5].answers">
+            
                <!-- <select2 [data]="questionsService.questions[0].answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="options" [value]="question4"><option></option></select2> -->
-            <div class="col-sm-4"  *ngFor=" let button of questionsService.questions[5].answers">
+            <div class="col-sm-12"  >
                <button type="button" class="btn btn-primary" data-question-id="8" [ngClass]="{'selected':questionsService.question8 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}</button>
              </div>
-             <div class="col-sm-2"></div>
+             
              </div>
      
          <div class="col-sm-12 continue-button-wrapper">

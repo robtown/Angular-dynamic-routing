@@ -7,46 +7,46 @@
 "questions": [
   [
     "Does your business need to access sales informaton and/or reportng for multiple locations on one system?" , [{
-      "text":"Yes","value":"MULTIREP", "answer":"my business needs to access sales informaton and/or reporting to multiple locatons on one system."},
-      {"text":"No","value":"none", "answer":"my business does not need to access sales informaton and/or reporting to multiple locatons on one system."
+      "text":"Yes","value":"MULTIREP", "answer":"Yes, my business needs to access sales informaton and/or reporting to multiple locatons on one system."},
+      {"text":"No","value":"none", "answer":"No, my business does not need to access sales informaton and/or reporting to multiple locatons on one system."
       
-    }], 1
+    }], 1 , {"questionExclude": []}
     ],
   [
     "Does your restaurant need pay-at-the-table or other mobile payment solutions?" , [{
-      "text":"Yes", "value":"MOBILITY", "answer":"my restaurant needs pay-at-the-table or other mobile payment optons."},
-      {"text": "No", "value":"none", "answer":"my restaurant does not need pay-at-the-table or other mobile payment optons." 
-    }], 2
+      "text":"Yes", "value":"MOBILITY", "answer":"Yes, my restaurant needs pay-at-the-table or other mobile payment optons."},
+      {"text": "No", "value":"none", "answer":"No, my restaurant does not need pay-at-the-table or other mobile payment optons." 
+    }], 2 , {"questionExclude": []}
     ],
   [
-    "Does your business process payments for internatonal cards?" , [{
-      "text":"Yes", "value":"INTERNATIONAL", "answer": "my business processes payments for internatonal cards."},
-      {"text":"No","value":"none", "answer": "my business does not processes payments for internatonal cards."
+    "Does your business process payments for international cards?" , [{
+      "text":"Yes", "value":"INTERNATIONAL", "answer": "Yes, my business processes payments for internatonal cards."},
+      {"text":"No","value":"none", "answer": "No, my business does not processes payments for internatonal cards."
       
-    }],  3
+    }],  3 , {"questionExclude": []}
     ],
   [
     "Do you need an online order feature or other e-commerce solution?" , [{
-      "text":"Yes", "value":"ECOMMERCE", "answer": "I need an online order feature or other e-commerce solution."},
-      {"text":"No", "value":"none", "answer": "I don't need an online order feature or other e-commerce solution."
+      "text":"Yes", "value":"ECOMMERCE", "answer": "Yes, I need an online order feature or other e-commerce solution."},
+      {"text":"No", "value":"none", "answer": "No, I don't need an online order feature or other e-commerce solution."
       
-    }],  4
+    }],  4 , {"questionExclude": ["CANADA"]}
     ],
   [
-    "Does your restaurant need advanced capabilites?" , [{
-      "text":"Yes, We need menu management.", "value":"MENUMGT"},
+    "Does your restaurant need advanced capabilities?" , [{
+      "text":"Yes, we need menu management.", "value":"MENUMGT"},
       {"text":"Yes, we need menu management, plus inventory management, split check or table management.","value":"MULTICAP"},
-      {"text":"We do not need any advanced capabilites. ","value":"none"
+      {"text":"No, we do not need any advanced capabilites. ","value":"none"
       
-    }], 5
+    }], 5 , {"questionExclude": []}
     ],
   [
     "Do you need a gift card or loyalty program? " , [{
-      "text":"We need to offer gift cards.", "value":"GCARD"},
-      {"text":"We need a loyalty program.","value":"LOYALTY"},
-      {"text":"We need to offer gift cards and a loyalty program.", "value": "GCARDLOYALTY"},
-      {"text":"We don't need to offer gift cards o a loyalty program.", "value":"none"
-    }],  6
+      "text":"Yes, we need to offer gift cards.", "value":"GCARD"},
+      {"text":"Yes, we need a loyalty program.","value":"LOYALTY"},
+      {"text":"Yes, we need to offer gift cards and a loyalty program.", "value": "GCARDLOYALTY"},
+      {"text":"No, we don't need to offer gift cards o a loyalty program.", "value":"none"
+    }],  6 , {"questionExclude": []}
     ]
 ]
 }

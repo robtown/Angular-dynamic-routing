@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../services/questions.service';
 import { Router } from '@angular/router';
+import { FullAnswer } from '../models/question';
 
 @Component({
     selector: 'about2',
@@ -10,18 +11,16 @@ import { Router } from '@angular/router';
     constructor(private questionsService: QuestionsService, private router: Router) { }
         loaded: boolean = true;
         products: any;
+        results: Array<FullAnswer> = [];
         
       ngOnInit(){
+      let self = this;
+   
+          this.products = this.questionsService.products;
+        
+          this.results = this.questionsService.fullAnswers;
+        
       
-    //   if(this.questionsService.questions.length > 0){
-    //   console.log(this.questionsService.selectedProducts);
-    //   console.log(this.questionsService.jsonQuestions);
-    //     this.loaded = true;
-    //   } else{
-    //     this.router.navigateByUrl('/');
-    //   }
-        this.products = this.questionsService.products;
-        var test = this.questionsService.getQuestionAnswers(3);
     }
      public onClick(event): void {
        console.log(event.currentTarget.value);

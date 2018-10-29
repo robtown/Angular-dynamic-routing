@@ -2,23 +2,21 @@
        
         <div *ngIf="loaded" class="questions-wrapper">
             <div class="questions-counter"><p>Results</p>
-            <div class="row buttons-wrapper">
-             <div class="col-sm-2"></div>
-               <!-- <select2 [data]="questionsService.questions[0].answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="options" [value]="question4"><option></option></select2> -->
-            <!-- <div class="col-sm-4"  *ngFor=" let button of questionsService.questions[0].answers">
-               <button type="button" class="btn btn-primary" data-question-id="3" [ngClass]="{'selected':questionsService.question3 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}</button>
-             </div>
-             <div class="col-sm-2"></div>
-             </div>
-     
-         <div class="col-sm-12 continue-button-wrapper">
-           <button type="button" class="btn btn-primary" [routerLink]="['/Q2']" [disabled]="(!questionsService.question3)"><p>Next <i class="far fa-chevron-circle-right"></i></p></button>
-         </div> -->
-         <div *ngIf="products">
+            <div class="row results-wrapper">
+                <div *ngIf="results" class="row">
+                  <div *ngFor="let answer of results" class="col-sm-12 row columns">
+                    <div class="col-sm-1">{{ answer.questionNum }}</div><div class="col-sm-11" style="text-align:left;">{{ answer.textAnswer }}</div>
+                    </div>
+              </div>
+         <hr style="height:1px;width:100%;">
+              <div *ngIf="products" class="col-sm-12">
                 <div *ngFor="let product of products | filterProducts: questionsService.selectedProducts">
                   {{ product.product }}
                   </div>
-            </div>
+             </div>
+           
 
      </div>
          </div>
+        </div>
+</div>

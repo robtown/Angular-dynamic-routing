@@ -2,8 +2,8 @@
        
         <div *ngIf="loaded" class="questions-wrapper">
             <div class="questions-counter">Question 4 of {{ questionsService.questions.length }}</div>
-         <p>{{ questionsService.questions[1].question }}</p>
-            <div class="row buttons-wrapper">
+         <p>{{ questionsService.questions[3].question }}</p>
+            <div *ngIf="questionsService.questions.length==6" class="row buttons-wrapper">
              <div class="col-sm-2"></div>
                <!-- <select2 [data]="questionsService.questions[0].answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="options" [value]="question4"><option></option></select2> -->
             <div class="col-sm-4"  *ngFor=" let button of questionsService.questions[3].answers">
@@ -11,6 +11,13 @@
              </div>
              <div class="col-sm-2"></div>
              </div>
+             <div class="row" *ngIf="questionsService.questions.length==5">
+             
+              <div class="col-sm-12 buttons-wrapper" *ngFor=" let button of questionsService.questions[3].answers">
+              <button type="button" class="btn btn-primary" data-question-id="6" [ngClass]="{'selected':questionsService.question6 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}</button>
+            </div>
+          
+          </div>
      
          <div class="col-sm-12 continue-button-wrapper">
            <button type="button" class="btn btn-primary" [routerLink]="['/Q5']" [disabled]="(!questionsService.question6)"><p>Next <i class="far fa-chevron-circle-right"></i></p></button>

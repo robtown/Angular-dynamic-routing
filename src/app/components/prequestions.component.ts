@@ -22,7 +22,7 @@ export class PrequestionsComponent implements OnInit{
   // Products array
   products: any = [];
 
-  answeredQuestions:any = ["","","","","","","","",""];
+  answeredQuestions:any = [];
   
   jsonQuestions: Questions;
   loaded: boolean = false;
@@ -42,11 +42,44 @@ export class PrequestionsComponent implements OnInit{
                   templateSelection: this.questionsService.templateSelection
                 };
               }
-              this.loadQuestions();
+              this.loadPrequestions();
             });
     }
 
-    loadQuestions(){
+    loadPrequestions(){
+     
+    // Not really using the title, but it's there if needed...
+    // this.title = this.questionsService.jsonQuestions.appname;
+
+    // Loadin
+
+      if(this.questionsService.preQuestions.length == 0){
+        var questionIndex:any  = 0
+        this.questionsService.jsonQuestions.prequestions.forEach(prequestion => {
+                  let questionForSelect2 : Select2Question = new Select2Question();
+
+                  questionForSelect2.question = prequestion[0];
+                  questionForSelect2.sortOrder = prequestion[2];
+                var rows2 = <Array<any>>prequestion[1];
+                  rows2.forEach(element => {
+                    var option = {
+                      'id': element.value,
+                      'text':  element.text,
+                      additional: {
+                        question: questionIndex,
+                        icon: element.icon
+                      }
+                      };
+                      questionForSelect2.answers.push(option);
+                    });
+                    this.questionsService.preQuestions.push(questionForSelect2);
+                    questionIndex ++;
+                    this.answeredQuestions.push("");
+              });
+            }
+            this.prequestions = this.questionsService.preQuestions;
+            this.getProducts();
+
             if(this.questionsService.question0){ 
               this.answeredQuestions[0] = this.questionsService.question0;
             }
@@ -56,42 +89,18 @@ export class PrequestionsComponent implements OnInit{
             if(this.questionsService.question2){ 
             this.answeredQuestions[2] = this.questionsService.question2; 
           }
-          // Not really using the title, but it's there if needed...
-          // this.title = this.questionsService.jsonQuestions.appname;
-
-          // Loadin
-
-            if(this.questionsService.preQuestions.length == 0){
-              var questionIndex:any  = 0
-              this.questionsService.jsonQuestions.prequestions.forEach(prequestion => {
-                        let questionForSelect2 : Select2Question = new Select2Question();
-
-                        questionForSelect2.question = prequestion[0];
-                        questionForSelect2.sortOrder = prequestion[2];
-                      var rows2 = <Array<any>>prequestion[1];
-                        rows2.forEach(element => {
-                          var option = {
-                            'id': element.value,
-                            'text':  element.text,
-                            additional: {
-                              question: questionIndex,
-                              icon: element.icon
-                            }
-                            };
-                            questionForSelect2.answers.push(option);
-                          });
-                          this.questionsService.preQuestions.push(questionForSelect2);
-                          questionIndex ++;
-                    });
-                  }
-
-                  if(this.questionsService.questions.length == 0){
+    }
+    loadQuestions(){
+           
+      this.questionsService.questions.length = 0;
+                  //if(this.questionsService.questions.length == 0){
                     var questionIndex:any  = 3
                     this.questionsService.jsonQuestions.questions.forEach(question => {
                               let questionForSelect2 : Select2Question = new Select2Question();
       
                               questionForSelect2.question = question[0];
                               questionForSelect2.sortOrder = question[2];
+                              questionForSelect2.excludeValues = question[3];
                             var rows2 = <Array<any>>question[1];
                               rows2.forEach(element => {
                                 var option = {
@@ -105,15 +114,18 @@ export class PrequestionsComponent implements OnInit{
                                   };
                                   questionForSelect2.answers.push(option);
                                 });
+                                if(questionForSelect2.excludeValues.questionExclude.indexOf(this.questionsService.question0) == -1){
                                 this.questionsService.questions.push(questionForSelect2);
+                                this.answeredQuestions.push("");
+                                }
                                 questionIndex ++;
                           });
-                        }
+                       // }
       
 
-                  this.prequestions = this.questionsService.preQuestions;
+                  
                   this.questions = this.questionsService.questions;
-                  this.getProducts();
+                  
                  
 
 
@@ -146,7 +158,20 @@ export class PrequestionsComponent implements OnInit{
       }
 
       public onChange(event): void { 
-       this.questionsService.updateQuestions(event);
+        
+        // If the current question is question 1 (US/Canada) load or reload the questions array
+        // so that the "ECOMMERCE" question is excluded for "CANADA" or included for US
+        if(event.data[0].additional["question"] == 0){
+          // Reset questions just in case they've already answered any
+          this.questionsService.resetQuestions();
+          this.questionsService.updateQuestions(event);
+
+          //reload the actual questions array to include/exclude any based on the answers in presquestions (1-3)
+          this.loadQuestions();
+        }else{
+          this.questionsService.updateQuestions(event);
+        }
+        
       }  
     
 }

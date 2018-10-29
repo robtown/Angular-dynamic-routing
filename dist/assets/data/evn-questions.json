@@ -1,53 +1,52 @@
   { "appname": "Elavon Product Selector",
   "prequestions" : [ 
-     [ "Region", [{"text":"US", "value":"US"}, {"text":"Canada", "value":"CANADA"} ], 1 ],
-     [ "Business Type", [ {"text":"Casual Dining", "value":"CDINING"}, {"text":"Fine Dining", "value":"FDINING"}, {"text":"Food Truck/Popup/Mobile", "value":"FOODTRUCK"}, {"text":"QSR", "value":"QSR"} ],  2 ],
-     [ "Annual Dollar Volume", [ { "text":"< $200K", "value":"ADV200K" } , {"text":"$200K - $500K", "value":"ADV200K500K"},{"text":"> $500K", "value":"ADV500K"} ], 3 ]
+     [ "Select region", [{"text":"United States", "value":"US", "icon": "US Flag.svg"}, {"text":"Canada", "value":"CANADA", "icon": "Canada.svg"} ], 1 ],
+     [ "Select business type", [ {"text":"Casual Dining", "value":"CDINING", "icon": "Casual Dining.svg"}, {"text":"Fine Dining", "value":"FDINING", "icon": "Fine Dining.svg"}, {"text":"Food Truck/Popup/Mobile", "value":"FOODTRUCK", "icon": "Food Truck.svg"}, {"text":"QSR", "value":"QSR", "icon": "QSR.svg"} ],  2 ],
+     [ "Select annual dollar volume", [ { "text":"< $200K", "value":"ADV200K" } , {"text":"$200K - $500K", "value":"ADV200K500K"},{"text":"> $500K", "value":"ADV500K"} ], 3 ]
   ],
 "questions": [
   [
-    "Does your business need to access sales informaton and/or reportng for multiple locations on one system?" , {
-      "Yes, my business needs to access sales informaton and/or reporting to multiple locatons on one system.":"MULTIREP",
-      "No, my business does not need to access sales informaton and/or reporting to multiple locatons on one system.":"none"
+    "Does your business need to access sales informaton and/or reportng for multiple locations on one system?" , [{
+      "text":"Yes","value":"MULTIREP", "answer":"Yes, my business needs to access sales informaton and/or reporting to multiple locatons on one system."},
+      {"text":"No","value":"none", "answer":"No, my business does not need to access sales informaton and/or reporting to multiple locatons on one system."
       
-    }, 1
+    }], 1 , {"questionExclude": []}
     ],
   [
-    "Does your restaurant need pay-at-the-table or other mobile payment solutions?" , {
-      "Yes, my restaurant needs pay-at-the-table or other mobile payment optons.":"MOBILITY",
-      "No, my restaurant does not need pay-at-the-table or other mobile payment optons.":"none"
-      
-    }, 2
+    "Does your restaurant need pay-at-the-table or other mobile payment solutions?" , [{
+      "text":"Yes", "value":"MOBILITY", "answer":"Yes, my restaurant needs pay-at-the-table or other mobile payment optons."},
+      {"text": "No", "value":"none", "answer":"No, my restaurant does not need pay-at-the-table or other mobile payment optons." 
+    }], 2 , {"questionExclude": []}
     ],
   [
-    "Does your business process payments for internatonal cards?" , {
-      "Yes, my business processes payments for internatonal cards.":"INTERNATIONAL",
-      "No, my business does not processes payments for internatonal cards.":"none"
+    "Does your business process payments for international cards?" , [{
+      "text":"Yes", "value":"INTERNATIONAL", "answer": "Yes, my business processes payments for internatonal cards."},
+      {"text":"No","value":"none", "answer": "No, my business does not processes payments for internatonal cards."
       
-    },  3
+    }],  3 , {"questionExclude": []}
     ],
   [
-    "Do you need an online order feature or other e-commerce solution?" , {
-      "Yes, I need an online order feature or other e-commerce solution.":"ECOMMERCE",
-      "No, I don't need an online order feature or other e-commerce solution.":"none"
+    "Do you need an online order feature or other e-commerce solution?" , [{
+      "text":"Yes", "value":"ECOMMERCE", "answer": "Yes, I need an online order feature or other e-commerce solution."},
+      {"text":"No", "value":"none", "answer": "No, I don't need an online order feature or other e-commerce solution."
       
-    },  4
+    }],  4 , {"questionExclude": ["CANADA"]}
     ],
   [
-    "Does your restaurant need advanced capabilites?" , {
-      "Yes, We need menu management.":"MENUMGT",
-      "Yes, we need menu management, plus inventory management, split check or table management.":"MULTICAP",
-      "We do not need any advanced capabilites. ": "none"
+    "Does your restaurant need advanced capabilities?" , [{
+      "text":"Yes, we need menu management.", "value":"MENUMGT"},
+      {"text":"Yes, we need menu management, plus inventory management, split check or table management.","value":"MULTICAP"},
+      {"text":"No, we do not need any advanced capabilites. ","value":"none"
       
-    }, 5
+    }], 5 , {"questionExclude": []}
     ],
   [
-    "Do you need a gift card or loyalty program? " , {
-      "We need to offer gift cards.":"GCARD",
-      "We need a loyalty program.":"LOYALTY",
-      "We need to offer gift cards and a loyalty program.": "GCARDLOYALTY",
-      "We don't need to offer gift cards o a loyalty program.": "none"
-    },  6
+    "Do you need a gift card or loyalty program? " , [{
+      "text":"Yes, we need to offer gift cards.", "value":"GCARD"},
+      {"text":"Yes, we need a loyalty program.","value":"LOYALTY"},
+      {"text":"Yes, we need to offer gift cards and a loyalty program.", "value": "GCARDLOYALTY"},
+      {"text":"No, we don't need to offer gift cards o a loyalty program.", "value":"none"
+    }],  6 , {"questionExclude": []}
     ]
 ]
 }

@@ -15,7 +15,7 @@ export class Question1 implements OnInit{
     
     if(this.questionsService.questions.length > 0){
     console.log(this.questionsService.selectedProducts);
-    console.log(this.questionsService.jsonQuestions);
+    console.log(this.questionsService.questions);
       this.loaded = true;
     } else{
       this.router.navigateByUrl('/');
