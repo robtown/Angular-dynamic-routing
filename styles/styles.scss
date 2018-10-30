@@ -1,0 +1,54 @@
+@import "_typography";
+@import "_colors";
+@import "_home";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+   
+    }
+    .navbar{
+        padding: .6rem 1rem;
+        background-color: white !important;
+
+        button{
+            &.find{
+                color: $white;
+                background: $btn-green;
+                font-family: 'Roboto', san-serif;
+                font-size: .9em;
+                border-radius: 4px;
+                padding: .4rem .9rem;
+                float:right;
+            }
+        }
+
+        select{
+
+            &.product-selector-nav{
+                margin-left:10%;
+                background: $white;
+                outline:0;
+                border:none;
+                padding:.4rem .9rem;
+               
+                
+
+                option{
+                    font-family: 'Roboto', san-serif;
+                    text-decoration: underline;
+                    &:selected{
+                        color:lt-gray;
+                    }
+                    
+                }
+            }
+        }
+    }
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+    }
