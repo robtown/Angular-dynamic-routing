@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../product-selector/src/assets/style/variables/styles-variables.scss"
+        "../restaurant/product-selector/assets/style/variables/styles-variables.scss"
     ],
     "names": [],
     "file": "styles-variables.css"

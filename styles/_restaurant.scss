@@ -119,7 +119,7 @@
 }
 }
 
-.products{
+.products, .solutions{
     background-color: $white;
     .main-image{
         position:absolute;
@@ -149,6 +149,31 @@
         }
         &.mobile{
             background: url("../images/Mobile_BG.jpg");
+            background-repeat:no-repeat;
+        background-position: center center;
+        background-size:cover;
+        }
+
+        &.tablet{
+            background: url("../images/Solutions_BG.jpg");
+            background-repeat:no-repeat;
+        background-position: center center;
+        background-size:cover;
+        }
+        &.ecommerce{
+            background: url("../images/Solutions_BG.jpg");
+            background-repeat:no-repeat;
+        background-position: center center;
+        background-size:cover;
+        }
+        &.smart{
+            background: url("../images/Solutions_BG.jpg");
+            background-repeat:no-repeat;
+        background-position: center center;
+        background-size:cover;
+        }
+        &.pay{
+            background: url("../images/Solutions_BG.jpg");
             background-repeat:no-repeat;
         background-position: center center;
         background-size:cover;
@@ -191,6 +216,11 @@
             line-height: 1.75rem;
             font-weight: 400;
             margin-bottom: 1rem;
+
+            &.solutions-lower-title{
+               // font-size: 1.85rem;
+            }
+
         }
         .body-copy{
             color: $text-gray;
@@ -201,7 +231,7 @@
         .callout-title{
             color: $blue;
             font-size: 1.1rem;
-            padding-top:7px;
+            padding-top:4px;
             font-weight: 400;
             margin-bottom: 0px;
         }
@@ -245,6 +275,18 @@
                 }
             }
         }
+
+        &.solutions{
+            background-color: transparent;
+            .lower-title{
+                font-size: 1.85rem;
+                width:100%;
+                padding-left:15px;
+            }
+            .callout-title{
+                color: $link-blue;
+            }
+        }
         @media screen and (max-width: 1024px){
             .buttons-wrapper{
                 .btn-primary{
@@ -280,6 +322,21 @@
         margin-right:5%;
         margin-top:3%;
         max-width:290px;
+    }
+    .text-xl-solutions{
+        padding-top:12rem;
+        h1{
+            line-height: 5rem;
+        }
+        p{
+            float:left;
+            font-weight:300;
+            width: 100%;
+            font-size: 2.5rem;
+            line-height: 2.6rem;
+            max-width: 55%;
+            margin-top: 10px;
+        }
     }
 
     .top-section{

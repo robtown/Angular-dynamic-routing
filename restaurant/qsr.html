@@ -9,9 +9,9 @@
     <title>Elavon Product Selector</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -21,17 +21,16 @@
 
 <body class="products"> 
     <header>
-            <nav class="navbar  navbar-light fixed-top">
+            <nav class="navbar  navbar-light fixed-top bg-light">
                     <a class="navbar-brand" href="http://www.elavon.com"></a>
-                   
                     <ul class="nav-top">
-                        <li class="active"><a href="restaurant.html">Restaurant</a></li>
+                        <li class="active"><a href="index.html">Restaurant</a></li>
                     </ul>
                     <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
                   </nav>
             </header>
             <!-- <main role="main" class="container"> -->
-   <div class="main-image casual"></div>       
+   <div class="main-image qsr"></div>       
     <div class="wrapper">
         <!-- Sidebar -->
         <div class="sidebar-wrapper">
@@ -40,15 +39,15 @@
     
             <ul class="list-unstyled components">
                     <li>
-                            <a href="restaurant.html">Overview</a>
+                            <a href="index.html">Overview</a>
                         </li>
                 <li>
                     <a href="qsr.html" aria-expanded="true">Customers</a>
                     <ul class="collapse list-unstyled show" id="customerSubmenu">
-                        <li class="qsr">
+                        <li class="qsr active">
                            <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
                         </li>
-                        <li class="casual active">
+                        <li class="casual">
                             <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
                         </li>
                         <li class="fine">
@@ -63,7 +62,7 @@
                     <a href="#">Customers</a>
                 </li> -->
                 <li>
-                    <a href="#" data-toggle="collapse" aria-expanded="false">Solutions</a>
+                    <a href="tablet.html">Solutions</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="#">Page 1</a>
@@ -93,29 +92,27 @@
         <div id="content">
               <!-- <div class="content-wrapper"> -->
                 <div class="Text-xl">
-                        <h1>Casual Dining</h1>
+                        <h1>QSR</h1>
                        
                     </div>   
               </div> 
               <div  class="lower-content overview col-sm-12 row columns">
                   <div class="col-sm-6">
-                    <div class="lower-title">Friends. Family. Frictionless.</div>
-                    <p class="body-copy">Casual dining is a time for people to come together to enjoy a meal—and that means offering payment methods that fit the needs of every group.</p>
-                    <p class="callout-title">Best solutions for Casual Dining</p>
+                    <div class="lower-title">Great Food. Low prices. Fast Service.</div>
+                    <p class="body-copy">Offer your QSR customers payment solutions that can keep up with their fast-paced environment.</p>
+                    <p class="callout-title">Best solutions for QSR's</p>
                     <div class="buttons-wrapper">
-                        <a href="#" class="btn btn-primary" role="button">Tablet POS</a> 
-                        <a href="#" class="btn btn-primary" role="button">Smart Terminal</a>
-                       <a href="#" class="btn btn-primary" role="button">Pay at the Table</a>
+                        <a href="#" class="btn btn-primary" role="button">Tablet POS</a> <a href="#" class="btn btn-primary" role="button">Smart Terminal</a>
                     </div>
                     <a href="#">See all payment solutions ></a>
                 </div>
                   <div class="col-sm-6">
-                        <p class="callout-title">Casual Dining Snapshot</p>
+                        <p class="callout-title">QSR Snapshot</p>
                         <ul class="lower-ul">
-                            <li>Focus on family and group dining</li>
-                            <li>Experienced employees</li>
-                            <li>Higher wages</li>
-                            <li>Separate bar service for customers</li>
+                            <li>Drive-thru and counter service environment</li>
+                            <li>High order volume</li>
+                            <li>Fast service and lower priced food</li>
+                            <li>Employees with less training and experience</li>
                         </ul>
                       
                   </div>
@@ -125,11 +122,11 @@
 <!-- </main> -->
 
      <!-- jQuery -->
-     <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="../js/jquery-3.3.1.min.js"></script>
      <!-- Popper.JS -->
-     <script src="js/popper.min.js"></script>
+     <script src="../js/popper.min.js"></script>
      <!-- Bootstrap JS -->
-     <script src="js/bootstrap.min.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
     <script>$(document).ready(function () {
 
         $('#sidebarCollapse').on('click', function () {

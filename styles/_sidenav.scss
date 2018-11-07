@@ -54,7 +54,7 @@ background: $white;
 #sidebar ul li.active > a{
     color: $active-purple;
 //background: #6d7fcc;
-    border-left: 10px solid $nav-hilite-blue;
+    border-left: 10px solid $link-blue2;
         &.qsr{
             border-left: 10px solid $qsr-red;
         }
@@ -73,6 +73,7 @@ color: $active-purple;
 //background: #6d7fcc;
 //border-left: 10px solid $nav-hilite-blue;
 padding-left:10px;
+font-weight: 700;
 }
 
 ul ul li{
@@ -113,22 +114,42 @@ ul ul {
         }
         &.qsr{
             span.icon{
-                background: url('../images/icons/qsr.svg') no-repeat top;
+                background: url('../images/icons/QSR.svg') no-repeat top;
             }
         }
         &.casual{
             span.icon{
-                background: url('../images/icons/casual dining.svg') no-repeat top;
+                background: url('../images/icons/Casual Dining.svg') no-repeat top;
             }
         }
         &.fine{
             span.icon{
-                background: url('../images/icons/fine dining.svg') no-repeat top;
+                background: url('../images/icons/Fine Dining.svg') no-repeat top;
             }
         }
         &.mobile{
             span.icon{
-                background: url('../images/icons/food truck.svg') no-repeat top;
+                background: url('../images/icons/Food Truck.svg') no-repeat top;
+            }
+        }
+        &.tablet{
+            span.icon{
+                background: url('../images/icons/Solutions-Tablet POS.svg') no-repeat top;
+            }
+        }
+        &.ecommerce{
+            span.icon{
+                background: url('../images/icons/Solutions-eCommerce.svg') no-repeat top;
+            }
+        }
+        &.smart{
+            span.icon{
+                background: url('../images/icons/Solutions-Smart Terminal.svg') no-repeat top;
+            }
+        }
+        &.pay{
+            span.icon{
+                background: url('../images/icons/Solutions-Pay at the Table.svg') no-repeat top;
             }
         }
     }
@@ -140,7 +161,7 @@ ul ul {
                 border-left:solid 10px $qsr-red;
                 padding-left: 20px !important;
                 span.icon{
-                    background: url('../images/icons/color/qsr.svg') no-repeat top;     
+                    background: url('../images/icons/color/QSR.svg') no-repeat top;     
                 }
                 .linktext{
                      color: $qsr-red;
@@ -152,7 +173,7 @@ ul ul {
                 border-left:solid 10px $casual-green;
                 padding-left: 20px !important;
                 span.icon{
-                    background: url('../images/icons/color/casual dining.svg') no-repeat top;     
+                    background: url('../images/icons/color/Casual Dining.svg') no-repeat top;     
                 }
                 .linktext{
                      color: $casual-green;
@@ -164,7 +185,7 @@ ul ul {
                 border-left:solid 10px $fine-blue;
                 padding-left: 20px !important;
                 span.icon{
-                    background: url('../images/icons/color/fine dining.svg') no-repeat top;     
+                    background: url('../images/icons/color/Fine Dining.svg') no-repeat top;     
                 }
                 .linktext{
                      color: $fine-blue;
@@ -176,10 +197,54 @@ ul ul {
                 border-left:solid 10px $mobile-green;
                 padding-left: 20px !important;
                 span.icon{
-                    background: url('../images/icons/color/food truck.svg') no-repeat top;     
+                    background: url('../images/icons/color/Food Truck.svg') no-repeat top;     
                 }
                 .linktext{
                      color: $mobile-green;
+                }
+            }
+        }
+        &.tablet{
+            a{
+                    padding-left: 20px !important;
+                    span.icon{
+                        background: url('../images/icons/color/Solutions-Tablet POS.svg') no-repeat top;
+                    }
+                    .linktext{
+                        color: $link-blue2;
+                }
+             }
+        }
+        &.ecommerce{
+            a{
+            padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/Solutions-eCommerce.svg') no-repeat top;
+                }
+                .linktext{
+                    color: $link-blue2;
+            }
+            }
+        }
+        &.smart{
+            a{
+                padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/Solutions-Smart Terminal.svg') no-repeat top;
+                }
+                .linktext{
+                    color: $link-blue2;
+            }
+        }
+        }
+        &.pay{
+            a{
+                    padding-left: 20px !important;
+                    span.icon{
+                        background: url('../images/icons/color/Solutions-Pay at the Table.svg') no-repeat top;
+                    }
+                    .linktext{
+                        color: $link-blue2;
                 }
             }
         }

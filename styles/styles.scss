@@ -65,3 +65,20 @@ body {
         margin-top:3%;
         max-width:290px;
     }
+
+    .modal-content{
+
+        ol{
+            li{
+                padding: .25rem 0;
+            }
+        }
+        a{
+            color: $link-blue;
+            text-decoration: underline;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
