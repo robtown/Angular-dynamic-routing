@@ -19,7 +19,7 @@
    
 </head>
 
-<body class="restaurant"> 
+<body class="products"> 
     <header>
             <nav class="navbar  navbar-light fixed-top bg-light">
                     <a class="navbar-brand" href="http://www.elavon.com"></a>
@@ -30,7 +30,7 @@
                   </nav>
             </header>
             <!-- <main role="main" class="container"> -->
-                 
+   <div class="main-image qsr"></div>       
     <div class="wrapper">
         <!-- Sidebar -->
         <div class="sidebar-wrapper">
@@ -38,23 +38,23 @@
            
     
             <ul class="list-unstyled components">
-                    <li class="active">
-                            <a data-toggle="collapse" aria-expanded="true" href="#">Overview</a>
+                    <li>
+                            <a href="restaurant.html">Overview</a>
                         </li>
                 <li>
-                    <a href="qsr.html" aria-expanded="false">Customers</a>
-                    <ul class="collapse list-unstyled" id="customerSubmenu">
-                        <li class="qsr">
-                           <a href="#" data-toggle="collapse" aria-expanded="true" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
+                    <a href="qsr.html" aria-expanded="true">Customers</a>
+                    <ul class="collapse list-unstyled show" id="customerSubmenu">
+                        <li class="qsr active">
+                           <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
                         </li>
                         <li class="casual">
-                            <a href="#" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
+                            <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
                         </li>
                         <li class="fine">
-                            <a href="#" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
+                            <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
                         </li>
                         <li class="mobile">
-                                <a href="#" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
+                                <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
                             </li>
                     </ul>
                 </li>
@@ -85,43 +85,38 @@
                             <a href="#">FAQs</a>
                         </li>
             </ul>
-     <div class="references-wrapper">
-            <div class="references-link">
-                <a href="#" data-toggle="modal" data-target="#referencesModal">References</a>
-            </div>
-        </div>
+    
         </nav>
-       
         </div>
         <!-- Page Content -->
         <div id="content">
               <!-- <div class="content-wrapper"> -->
-                <div class="Text-xl top-section">
-                        <h1>Payments Served.</h1>
-                        
-                    </div>  
-                    
-              </div> <div class= "bottom-section">
-                      <div class="bottom-right-stats">
-                          <h3>7/10</h3>
-                            <p>
-                                restaurants operate as a single unit location <sup>1</sup>
-                        </p>
-                       </div>
-                       <div class="bottom-right-stats">
-                            <h3>$200 billion</h3>
-                              <p>
-                                  is spent by millennials in restaurants each year <sup>2</sup>
-                          </p>
-                         </div>
-                         <div class="bottom-right-stats">
-                                <h3>64%</h3>
-                                  <p>
-                                      of US smartphone users deploy Buy Online, Pick Up in Store (BOPIS) monthly <sup>3</sup>
-                              </p>
-                             </div>
-
-                    </div> 
+                <div class="Text-xl">
+                        <h1>QSR</h1>
+                       
+                    </div>   
+              </div> 
+              <div  class="lower-content overview col-sm-12 row columns">
+                  <div class="col-sm-6">
+                    <div class="lower-title">Great Food. Low prices. Fast Service.</div>
+                    <p class="body-copy">Offer your QSR customers payment solutions that can keep up with their fast-paced environment.</p>
+                    <p class="callout-title">Best solutions for QSR's</p>
+                    <div class="buttons-wrapper">
+                        <a href="#" class="btn btn-primary" role="button">Tablet POS</a> <a href="#" class="btn btn-primary" role="button">Smart Terminal</a>
+                    </div>
+                    <a href="#">See all payment solutions ></a>
+                </div>
+                  <div class="col-sm-6">
+                        <p class="callout-title">QSR Snapshot</p>
+                        <ul class="lower-ul">
+                            <li>Drive-thru and counter service environment</li>
+                            <li>High order volume</li>
+                            <li>Fast service and lower priced food</li>
+                            <li>Employees with less training and experience</li>
+                        </ul>
+                      
+                  </div>
+              </div>
         <!-- </div> -->
     </div>
 <!-- </main> -->
@@ -140,35 +135,9 @@
         $('button.find').on('click', function(){
             window.location.href = $(this).data("href");
         });
-
-        // $('.references-link').on('click', 'a', function(){
-        //     $('#referencesModal').modal('show');
-        // })
     
     });
     </script>
-    <!-- Modal -->
-<div class="modal fade" id="referencesModal" tabindex="-1" role="dialog" aria-labelledby="refrencesModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">References</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>1. Some text here.</p>
-              <p>2. Some text here.</p>
-              <p>3. Some text here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-            </div>
-          </div>
-        </div>
-      </div>
 </body>
 
 </html>

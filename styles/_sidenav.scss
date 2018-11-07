@@ -1,0 +1,231 @@
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+
+#sidebar {
+min-width: 250px;
+max-width: 250px;
+background: $nav-bg-gray;
+color: $link-gray;
+transition: all 0.3s;
+padding: 0 0 150px;
+//position:relative;
+}
+#sidebar .sidebar-header {
+padding: 20px;
+background: #6d7fcc;
+}
+
+#sidebar ul.components {
+padding: 0;
+//border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+color: #fff;
+padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    border-bottom: thin solid $nav-hr-gray;
+    padding-left:20px;
+    width: 100%;
+    display: table;
+}
+#sidebar ul li a:hover {
+color: $active-purple;
+background: $white;
+}
+#sidebar ul li.active > a{
+    color: $active-purple;
+//background: #6d7fcc;
+    border-left: 10px solid $nav-hilite-blue;
+        &.qsr{
+            border-left: 10px solid $qsr-red;
+        }
+        &.casual{
+            border-left: 10px solid $casual-green;
+        }
+        &.fine{
+            border-left: 10px solid $fine-blue;
+        }
+        &.mobile{
+            border-left: 10px solid $mobile-green;
+        }
+}
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+color: $active-purple;
+//background: #6d7fcc;
+//border-left: 10px solid $nav-hilite-blue;
+padding-left:10px;
+}
+
+ul ul li{
+
+    span.icon{
+        width:30px;
+        height: 30px;
+        display:table;
+        img{
+            width:100%;
+        }
+    }
+}
+ul ul {
+    
+    li{
+         a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: $white;
+        span.icon{
+            width:30px;
+            height:32px;
+            display:table;
+            float:left;
+            background-size: cover;
+               
+            img{
+                width:100%;
+            }
+        }
+        .linktext{
+            display: table;
+            float: left;
+            margin-left: 12px;
+            padding-top: 3px;
+            font-weight: bold;
+        }
+        &.qsr{
+            span.icon{
+                background: url('../images/icons/qsr.svg') no-repeat top;
+            }
+        }
+        &.casual{
+            span.icon{
+                background: url('../images/icons/casual dining.svg') no-repeat top;
+            }
+        }
+        &.fine{
+            span.icon{
+                background: url('../images/icons/fine dining.svg') no-repeat top;
+            }
+        }
+        &.mobile{
+            span.icon{
+                background: url('../images/icons/food truck.svg') no-repeat top;
+            }
+        }
+    }
+
+    &.active{
+        
+        &.qsr{
+            a{
+                border-left:solid 10px $qsr-red;
+                padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/qsr.svg') no-repeat top;     
+                }
+                .linktext{
+                     color: $qsr-red;
+                }
+            }
+        }
+        &.casual{
+            a{
+                border-left:solid 10px $casual-green;
+                padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/casual dining.svg') no-repeat top;     
+                }
+                .linktext{
+                     color: $casual-green;
+                }
+            }
+        }
+        &.fine{
+            a{
+                border-left:solid 10px $fine-blue;
+                padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/fine dining.svg') no-repeat top;     
+                }
+                .linktext{
+                     color: $fine-blue;
+                }
+            }
+        }
+        &.mobile{
+            a{
+                border-left:solid 10px $mobile-green;
+                padding-left: 20px !important;
+                span.icon{
+                    background: url('../images/icons/color/food truck.svg') no-repeat top;     
+                }
+                .linktext{
+                     color: $mobile-green;
+                }
+            }
+        }
+    }
+}
+
+
+
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+a[data-toggle="collapse"] {
+position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.sidebar-wrapper{
+
+    nav{
+
+        .references-wrapper{
+            position: absolute;
+            bottom: 0;
+            padding: 130px 0px 20px 20px;
+            z-index: 1;
+
+            a{
+                color: $link-gray;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+#sidebar {
+    //margin-left: -250px;
+}
+#sidebar.active {
+    margin-left: 0;
+}
+}

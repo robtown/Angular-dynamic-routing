@@ -1,0 +1,4 @@
+[Mon Nov 05 11:26:55.771918 2018] [authz_core:error] [pid 11496] [client 127.0.0.1:52778] AH01630: client denied by server configuration: /Users/rwilliams/Sites/Elavon Product selector/
+[Mon Nov 05 11:26:56.008506 2018] [authz_core:error] [pid 11496] [client 127.0.0.1:52778] AH01630: client denied by server configuration: /Users/rwilliams/Sites/Elavon Product selector/favicon.ico, referer: http://local.product-selector.com/
+[Mon Nov 05 11:27:03.525041 2018] [authz_core:error] [pid 11499] [client 127.0.0.1:52779] AH01630: client denied by server configuration: /Users/rwilliams/Sites/Elavon Product selector/index.html
+[Mon Nov 05 11:27:03.583198 2018] [authz_core:error] [pid 11499] [client 127.0.0.1:52779] AH01630: client denied by server configuration: /Users/rwilliams/Sites/Elavon Product selector/favicon.ico, referer: http://local.product-selector.com/index.html

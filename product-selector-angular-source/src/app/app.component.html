@@ -1,0 +1,19 @@
+<header>
+    
+         
+                <div class="col-sm-12 test"><a href="../index.html" class="btn">Leave product selector</a>
+                <div class="business-type-icon" *ngIf="questionsService.headerIcon" [innerHtml]="questionsService.headerIcon | safe: 'html'"></div>
+                </div>
+            
+        
+        </header>
+        
+        <div class="bodycontent col-sm-12" [@routerTransition]="getState(o)">
+
+        <router-outlet #o="outlet"></router-outlet>
+</div>
+
+
+
+
+
