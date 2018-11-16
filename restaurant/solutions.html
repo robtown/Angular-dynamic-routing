@@ -19,9 +19,13 @@
    
 </head>
 
-<body class="products"> 
+<body class="solutions" data-spy="scroll" data-target="#sidebar" data-offset="160"> 
     <header>
             <nav class="navbar  navbar-light fixed-top">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info menu-toggle" aria-expanded="false">
+                            <!-- <i class="fas fa-align-left"></i> -->
+                            <span></span>
+                        </button>
                     <a class="navbar-brand" href="http://www.elavon.com"></a>
                    
                     <ul class="nav-top">
@@ -31,98 +35,314 @@
                   </nav>
             </header>
             <!-- <main role="main" class="container"> -->
-   <div class="main-image mobile"></div>       
-    <div class="wrapper">
-        <!-- Sidebar -->
-        <div class="sidebar-wrapper">
-        <nav id="sidebar">
-           
-    
-            <ul class="list-unstyled components">
-                    <li>
-                            <a href="index.html">Overview</a>
+                  <!-- Sidebar -->
+        <div class="sidebar-wrapper" id="sidebar-wrapper-div">
+                <nav id="sidebar">
+                   
+            
+                    <ul class="list-unstyled components">
+                            <li>
+                                    <a href="index.html">Overview</a>
+                                </li>
+                        <li>
+                            <a href="qsr.html">Customers</a>
+                            <ul class="collapse list-unstyled" id="customerSubmenu">
+                                <li class="qsr">
+                                   <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
+                                </li>
+                                <li class="casual">
+                                    <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
+                                </li>
+                                <li class="fine">
+                                    <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
+                                </li>
+                                <li class="mobile active">
+                                        <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
+                                    </li>
+                            </ul>
                         </li>
-                <li>
-                    <a href="qsr.html">Customers</a>
-                    <ul class="collapse list-unstyled" id="customerSubmenu">
-                        <li class="qsr">
-                           <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
-                        </li>
-                        <li class="casual">
-                            <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
-                        </li>
-                        <li class="fine">
-                            <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
-                        </li>
-                        <li class="mobile active">
-                                <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
-                            </li>
-                    </ul>
-                </li>
-                <!-- <li>
-                    <a href="#">Customers</a>
-                </li> -->
-                <li >
-                    <a href="tablet.html" aria-expanded="true">Solutions</a>
-                    <ul class="collapse list-unstyled show" id="pageSubmenu">
-                        <li class="tablet active">
-                            <a href="#" class="tablet"><span class="icon"></span> <div class="linktext">Tablet POS</div></a>
-                        </li>
-                        <li class="ecommerce">
-                            <a href="#" class="ecommerce"><span class="icon"></span> <div class="linktext">eCommerce</div></a>
-                        </li>
-                        <li class="smart">
-                            <a href="#" class="smart"><span class="icon"></span> <div class="linktext">Smart Terminal</div></a>
-                        </li>
-                        <li class="pay">
-                                <a href="#" class="pay"><span class="icon"></span> <div class="linktext">Pay at the Table</div></a>
-                            </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Conversation Starters</a>
-                </li>
-                <li>
-                        <a href="#">Competitive Comparison</a>
-                    </li>
-                    <li>
-                            <a href="#">FAQs</a>
-                        </li>
-            </ul>
-    
-        </nav>
-        </div>
-        <!-- Page Content -->
-        <div id="content">
-              <!-- <div class="content-wrapper"> -->
-                <div class="Text-xl">
-                        <h1>Mobile/Food Truck</h1>
                        
-                    </div>   
-              </div> 
-              <div  class="lower-content overview col-sm-12 row columns">
-                  <div class="col-sm-6">
-                    <div class="lower-title">Fresh. Regional. Convienent.</div>
-                    <p class="body-copy">Every mobile food option, from pop-ups to food trucks, needs payment solutions that can keep up with their growing demand and on-the-go style.</p>
-                    <p class="callout-title">Best solutions for Mobile</p>
-                    <div class="buttons-wrapper">
-                        <a href="#" class="btn btn-primary" role="button">Tablet POS</a> 
-                        <a href="#" class="btn btn-primary" role="button">Smart Terminal</a>
-                       <!-- <a href="#" class="btn btn-primary" role="button">Pay at the Table</a> -->
-                    </div>
-                    <a href="#">See all payment solutions ></a>
+                        <li >
+                            <a href="solutions.html" aria-expanded="true">Solutions</a>
+                            <ul class="collapse list-unstyled show" id="pageSubmenu">
+                                <li class="tablet nav-item">
+                                    <a href="#tablet" data-href="tablet" class="tablet nav-link"><span class="icon"></span> <div class="linktext">Tablet POS</div></a>
+                                </li>
+                                <li class="ecommerce nav-item">
+                                    <a href="#ecommerce" data-href="ecommerce" class="ecommerce nav-link"><span class="icon"></span> <div class="linktext">eCommerce</div></a>
+                                </li>
+                                <li class="smart nav-item">
+                                    <a href="#smart" data-href="smart" class="smart nav-link"><span class="icon"></span> <div class="linktext">Smart Terminal</div></a>
+                                </li>
+                                <li class="pay nav-item">
+                                        <a href="#pay" data-href="pay" class="pay nav-link"><span class="icon"></span> <div class="linktext">Pay at the Table</div></a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="conversationstarters.html">Conversation Starters</a>
+                        </li>
+                        <li>
+                                <a href="competitivecomparisons.html">Competitive Comparison</a>
+                            </li>
+                            <li>
+                                    <a href="faqs.html">FAQs</a>
+                                </li>
+                    </ul>
+            
+                </nav>
                 </div>
-                  <div class="col-sm-6">
-                        <p class="callout-title">Mobile Snapshot</p>
-                        <ul class="lower-ul">
-                            <li>Highly entrepreneurial mindset</li>
-                            <li>Owners are operators</li>
-                            <li>Long hours, high-stress environments</li>
-                            <li>Heavily regulated</li>
-                        </ul>
-                      
+   <div class="main-image tablet"> 
+       <div class="Text-xl text-xl-solutions">
+                <h1>Fresh Solutions.</h1>
+                <h1>Personalized Service.</h1>
+                <p>No matter how you do business, we've got you covered.</p> 
+            </div>   
+    </div>       
+    <div class="wrapper">
+        <!-- Page Content -->
+        
+              <div id="tablet" class="lower-content overview solutions col-sm-12 d-flex row columns justify-content-left"> 
+                  <div class="lower-title col-12">Tablet POS</div>
+                  <div class="row">
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                            <div class="solution-image">
+                                <img src="../images/solutions/NCR-Pro.png" /></div>
+                                <div class="col-sm-12 solution-callout"><p class="callout-title">NCR Pro</p></div>
+                                    <div class="lower-ul">
+                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$1M+ processing/site/year</p></div>
+                                      
+                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 sites</p></div>
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 SKUs</p></div>
+                
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Counter and drive-thru POS</p></div>
+                                                    <div class="list-item"><div class="bullet"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i></div><p>Advanced operations (tablet layout, split ticket, etc.) and back-end (expanded user roles, advanced labor, etc.) features</p></div>
+                                    </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                                <div class="solution-image">
+                                    <img src="../images/solutions/NCR-Silver.png" /></div>
+                                    <div class="col-sm-12 solution-callout"><p class="callout-title">NCR Silver</p>
+                                     <p class="callout-text">Frictionless customer engagement and powerful payment acceptance, all in one package</p></div>
+                                     <div class="lower-ul">
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$200K to $500K processing volume/site/year</p></div>
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 sites</p></div>
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 SKUs</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Counter and drive-thru POS</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Best for restaurants with limited counter space and a need for strong operations and back-end features at an affordable price </p></div>
+                                    </div>
+                                    </div>
+    
+                        </div>
+
+                        <div class="row">
+
+                                <div class="col-sm-12 col-md-6 align-items-end">
+                                        <div class="solution-image">
+                                                <img src="../images/solutions/taltech-Premium.jpg" />
+                                            </div>
+                                            <div class="col-sm-12 solution-callout">
+                                                    <p class="callout-title">talech Premium</p>
+                                                    <p class="callout-text">Premium service for full-service restaurants</p>
+                                            </div>
+                                            <div class="lower-ul">
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$200K to $1M+ processing volume/site/year</p></div>
+                                                  
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 sites</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 50K SKUs</p></div>
+                              
+                                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Integrates with talech Online Ordering, Safe-T and Fanfare</p></div>
+                                                                <div class="list-item"><div class="bullet"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i></div><p>Advanced operations and back-end features</p></div>
+                                                </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 align-items-end">
+                                        <div class="solution-image">
+                                                <img src="../images/solutions/taltech-Standard.jpg" />
+                                            </div>
+                                            <div class="col-sm-12 solution-callout">
+                                                    <p class="callout-title">talech Standard</p>
+                                                    <p class="callout-text">Keeping up with the fast pace of QSR and casual dining</p>
+                                            </div>
+                                            <div class="lower-ul">
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$200K to $500K+ processing volume/site/year</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 250 sites</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 25K SKUs</p></div>
+                                                            
+                                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Integrates with talech Online Ordering, Safe-T and Fanfare</p></div>
+                                            </div>
+                                </div>
+
+
+                        </div>
+
+
+                        <div class="row">
+
+                                <div class="col-sm-12 col-md-6 align-items-end">
+                                        <div class="solution-image">
+                                                <img src="../images/solutions/taltech-Starter.jpg" />
+                                         </div>
+                                         <div class="col-sm-12 solution-callout">
+                                                <p class="callout-title">talech Starter</p>
+                                                <p class="callout-text">Full-featured tablet solution for smaller restaurants and retail</p>
+                                                </div>
+                                                <div class="lower-ul">
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p> < $200K processing volume/site/year</p></div>
+                                                      
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Single site</p></div>
+                                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 100 SKUs</p></div>
+                                    
+                                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Inventory tracking, order and cash drawer management</p></div>
+                                                    </div>
+                                 </div>
+                                 <div class="col-sm-12 col-md-6 align-items-end">
+                                        <div class="solution-image">
+                                                <img src="../images/solutions/taltech-on-Moby-or-Poynt.jpg" />  
+                                         </div>
+                                         <div class="col-sm-12 solution-callout">
+                                                <p class="callout-title">talech Standard</p>
+                                                <p class="callout-text">Powerful tablet POS. For payments and more.</p>
+                                         </div>
+                                         <div class="lower-ul">
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Debit and credit cards, contactless payments (including Apple Pay)</p></div>
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Online Ordering</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Menu, order and table management</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Fully wireless, allowing payments anywhere</p></div>
+                                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Consumer friendly design with custom branding</p></div>
+                                        </div>
+                                               
+                                 </div>
+
+
+
                   </div>
-              </div>
+            <hr>
+            <div id="ecommerce" class="lower-title lower-spacer col-12">eCommerce</div>
+                  <div class="row">
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                                 <div class="col-sm-12 solution-callout">
+                                        <p class="callout-title">NCR Silver Commerce - Add on</p>
+                                        <p class="callout-text">Integrates with your NCR Silver package and launches your web store easily</p>
+                                        </div>
+                                        <div class="lower-ul">
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Create and host an eCommerce site through NCR Silver Back Office</p></div>
+                                              
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>View reporting from online and in-store sales</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Use existing NCR Silver inventory to create online items and tailor with specific names, descriptions and image</p></div>
+                        
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Responsive web store design</p></div>
+                                            </div>
+                                        
+                         </div>
+
+                         <div class="col-sm-12 col-md-6 align-items-end">
+                                <div class="col-sm-12 solution-callout">
+                                        <p class="callout-title">talech Online Ordering - Add on</p>
+                                        <p class="callout-text">Seamless integration with talech POS for a mobile-friendly site</p>
+                                       </div>
+                                       <div class="lower-ul">
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Branded website</p></div>
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Integrate payment options</p></div>
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Seamless order management</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Automatic notifications</p></div>
+                                                           <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Customer insights and reporting</p></div>
+                                    </div>
+                                       
+                        </div>
+
+
+                  </div>
+                 
+
+                <hr>
+                <div  id="smart" class="lower-title lower-spacer col-12">Smart Terminal</div>
+                <div class="row">
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                                <div class="solution-image">
+                                <img src="../images/solutions/smart-terminal.jpg"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 align-items-end">
+                                    <div class="col-sm-12 solution-callout">
+                                            <p class="callout-title">Poynt</p>
+                                            <p class="callout-text">Easy-to-use smart terminal.<br/>
+                                            All-in-one design.</p>
+                                            </div>
+                                            <div class="lower-ul">
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Branded website</p></div>
+                                                  
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Integrate payment options</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Seamless order management</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Automatic notifications</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Customer insights and reporting</p></div>
+                            
+                                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Optional 3G capability for long range use</p></div>
+                                                </div>
+                                 </div>
+
+                </div>
+
+                <hr>
+                <div id="pay" class="lower-title lower-spacer col-12">Pay at the Table</div>
+                  <div class="row">
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                                <div class="col-sm-12 solution-callout">
+                                        <p class="callout-title">Poynt 5</p>
+                                        <p class="callout-text">Ultra-mobile. Ultra-smart</p>
+                                        </div>
+                                        <div class="lower-ul">
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Runs Poynt or talech POS system</p></div>
+                                              
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Features a 5" touch screen</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Ideal for mobile or drive-up sales, line busting and pay at the table</p></div>
+                
+                                            </div>
+                                        
+                             </div>
+                             <div class="col-sm-12 col-md-6 align-items-end">
+                                    <div class="solution-image">
+                                    <img src="../images/solutions/poynt5.png"/>
+                                    </div>
+                                </div>
+
+                  </div>
+
+                  <div class="row">
+                        <div class="col-sm-12 col-md-6 align-items-end">
+                                <div class="solution-image">
+                                        <img src="../images/solutions/Ingenico-long-range-add-on.png" />
+                                </div>
+                                <div class="col-sm-12 solution-callout">
+                                        <p class="callout-title">Ingenico Long Range - Add on</p>
+                                        <p class="callout-text">Take payments in the store or on the go</p>
+                                        </div>
+                                        <div class="lower-ul">
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Long-life battery</p></div>
+                                              
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>GPRS connectivity allows for accepting payments on the go</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Ideal for mobile or drive-up sales, line busting and pay at the table</p></div>
+                                            </div>
+                                       
+                             </div>
+                             <div class="col-sm-12 col-md-6 align-items-end">
+                                    <div class="solution-image">
+                                            <img src="../images/solutions/Ingenico-short-range-add-on.png" />
+                                    </div>
+                                    <div class="col-sm-12 solution-callout">
+                                            <p class="callout-title">Ingenico Short Range - Add on</p>
+                                            <p class="callout-text">Give customers the flexibility to take payments at the counter or at the table</p>
+                                            </div>
+                                            <div class="lower-ul">
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Take payments withing 300 feet of the base unit</p></div>
+                                                    <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Secure, encrypted Bluetooth connectivity</p></div>
+                                                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Ideal for mobile or drive-up sales, line busting and pay at the table</p></div>
+                                            </div>
+                                           
+                                 </div>
+
+                  </div>
+              </div> <!-- Lower Content-->
         <!-- </div> -->
     </div>
 <!-- </main> -->
@@ -133,16 +353,14 @@
      <script src="../js/popper.min.js"></script>
      <!-- Bootstrap JS -->
      <script src="../js/bootstrap.min.js"></script>
-    <script>$(document).ready(function () {
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-        $('button.find').on('click', function(){
-            window.location.href = $(this).data("href");
-        });
-    
-    });
+     <script src="../js/jquery.matchHeight-min.js"></script>
+    <script src="../js/product-selector.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('.solution-image').matchHeight();
+        $('.solution-callout').matchHeight();
+        
+         });
     </script>
 </body>
 

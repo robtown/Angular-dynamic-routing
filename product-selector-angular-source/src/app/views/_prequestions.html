@@ -5,22 +5,22 @@
       <h1>Welcome</h1>
       <p>Answer a few questions to identify the best solution for your customer's business.</p>
       <div class="prequestions-line">
-        <div class="col-sm-4"><div class="circles question1" [ngClass]="{'answered':questionsService.question0}"><fa *ngIf="questionsService.question0" name="check-circle"></fa></div></div>
-        <div class="col-sm-4"><div class="circles question2" [ngClass]="{'answered':questionsService.question1}"><fa *ngIf="questionsService.question1" name="check-circle"></fa></div></div>
-        <div class="col-sm-4"><div class="circles question3" [ngClass]="{'answered':questionsService.question2}"><fa *ngIf="questionsService.question2" name="check-circle"></fa></div></div>
+        <div class="col-sm-4"><div class="circles question1" [ngClass]="{'answered':qs.question0}"><fa *ngIf="qs.question0" name="check-circle"></fa></div></div>
+        <div class="col-sm-4"><div class="circles question2" [ngClass]="{'answered':qs.question1}"><fa *ngIf="qs.question1" name="check-circle"></fa></div></div>
+        <div class="col-sm-4"><div class="circles question3" [ngClass]="{'answered':qs.question2}"><fa *ngIf="qs.question2" name="check-circle"></fa></div></div>
       </div>
     
 
       <div *ngIf="loaded" class="row questions2">
          <div *ngFor="let prequestion of prequestions; let i = index;" class="col-sm-12 col-md-4">
            <div class="label-wrapper"> <label>{{prequestion.question}}:</label></div>
-            <select2 [data]="prequestion.answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="questionsService.jsonQuestions.options" [value]="answeredQuestions[i]"></select2>
+            <select2 [data]="prequestion.answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="qs.jsonQuestions.options" [value]="answeredQuestions[i]"></select2>
           </div>
          </div>
     
      
       <div class="col-sm-12 continue-button-wrapper">
-        <button type="button" class="btn btn-primary" [routerLink]="['/Q1']" [disabled]="(!questionsService.question0 || !questionsService.question1 || !questionsService.question2)"><p>Next <i class="far fa-chevron-circle-right"></i></p></button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/Q1']" [disabled]="(!qs.question0 || !qs.question1 || !qs.question2)"><p>Next <i class="far fa-chevron-circle-right"></i></p></button>
       </div>
       
       </div>

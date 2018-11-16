@@ -1,0 +1,14 @@
+table{
+    &.compare-table{
+        td{
+            border: thin solid $link-gray;
+            vertical-align: top;
+            padding: 5px;
+            line-height: 18px;
+
+            ul{
+                padding-left: 20px;
+            }
+        }
+    }
+}

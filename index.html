@@ -34,23 +34,14 @@
     <div class="wrapper">
    
         <!-- Page Content -->
-        <div id="content">
+
             <div class="Text-xl">
                 <h1>Explore</h1>
                 <p>
                         Payments just got a whole lot easier. Find the solutions that are right for your customers.
                 </p>
             </div>
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-    
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
-                    </button>
-                </div>
-            </nav> -->
-        </div>
+
     </div>
 <!-- </main> -->
 
@@ -60,21 +51,22 @@
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <script>$(document).ready(function () {
+    <script src="js/product-selector.js">
+    //     $(document).ready(function () {
 
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
+    //     $('#sidebarCollapse').on('click', function () {
+    //         $('#sidebar').toggleClass('active');
+    //     });
 
-        $('button.find').on('click', function(){
-            window.location.href = $(this).data("href");
-        });
-        $('.product-selector-nav').on('change', function(){
-            var loc = $(this).val();
-            window.location.href = loc;
-        });
+    //     $('button.find').on('click', function(){
+    //         window.location.href = $(this).data("href");
+    //     });
+    //     $('.product-selector-nav').on('change', function(){
+    //         var loc = $(this).val();
+    //         window.location.href = loc;
+    //     });
     
-    });
+    // });
     </script>
 </body>
 

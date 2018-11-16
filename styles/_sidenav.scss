@@ -11,9 +11,56 @@ a, a:hover, a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+#sidebarCollapse{
+    padding: 1.15rem 2.75rem 1.3rem 0.5rem;
+    border: thin solid rgba($underline-gray, .6);
+    background: transparent;
+    float:left;
+    display:none;
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($link-blue,.5);
+    }
 
+    span, span:before, span:after {
+    cursor: pointer;
+    border-radius: 1.5px;
+    height: 3px;
+    width: 35px;
+    background: rgba($underline-gray, .6);
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all .2s ease-in-out;
+    }
 
+     span:before {
+        top: -.5rem; 
+      }
+      span:after {
+        bottom: -.5rem;
+      }
 
+      &.active{
+          span{
+            background:transparent;
+            &:before{
+                transform: rotate(45deg);
+                top: 0;
+            }
+            &:after{
+                transform: translateY(-10px) rotate(-45deg);
+                top: 10px;
+            }
+          }
+      }
+      @media screen and (max-width:768px){
+          display:block;
+      }
+}
+
+.sidebar-wrapper, .text-xl-solutions, .wrapper{
+    transition: margin-left 0.3s;
+}
 #sidebar {
 min-width: 250px;
 max-width: 250px;
@@ -288,9 +335,19 @@ position: relative;
 }
 @media (max-width: 768px) {
 #sidebar {
-    //margin-left: -250px;
+    margin-left: -250px;
 }
 #sidebar.active {
     margin-left: 0;
 }
+}
+
+body{
+    &.fixed-side-nav{
+            .sidebar-wrapper{
+                margin-top:0;
+                position:fixed;
+                top:58px;
+            }
+    }
 }

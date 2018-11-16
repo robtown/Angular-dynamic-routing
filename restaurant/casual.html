@@ -30,73 +30,72 @@
                     <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
                   </nav>
             </header>
-            <!-- <main role="main" class="container"> -->
-   <div class="main-image casual"></div>       
-    <div class="wrapper">
-        <!-- Sidebar -->
+           <!-- Sidebar -->
         <div class="sidebar-wrapper">
-        <nav id="sidebar">
-           
-    
-            <ul class="list-unstyled components">
-                    <li>
-                            <a href="index.html">Overview</a>
+                <nav id="sidebar">
+                   
+            
+                    <ul class="list-unstyled components">
+                            <li>
+                                    <a href="index.html">Overview</a>
+                                </li>
+                        <li>
+                            <a href="qsr.html" aria-expanded="true">Customers</a>
+                            <ul class="collapse list-unstyled show" id="customerSubmenu">
+                                <li class="qsr">
+                                   <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
+                                </li>
+                                <li class="casual active">
+                                    <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
+                                </li>
+                                <li class="fine">
+                                    <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
+                                </li>
+                                <li class="mobile">
+                                        <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
+                                    </li>
+                            </ul>
                         </li>
-                <li>
-                    <a href="qsr.html" aria-expanded="true">Customers</a>
-                    <ul class="collapse list-unstyled show" id="customerSubmenu">
-                        <li class="qsr">
-                           <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
+                        <!-- <li>
+                            <a href="#">Customers</a>
+                        </li> -->
+                        <li>
+                            <a href="solutions.html">Solutions</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li class="tablet active">
+                                    <a href="solutions.html" class="tablet"><span class="icon"></span> <div class="linktext">Tablet POS</div></a>
+                                </li>
+                                <li class="ecommerce">
+                                    <a href="ecommerce.html" class="ecommerce"><span class="icon"></span> <div class="linktext">eCommerce</div></a>
+                                </li>
+                                <li class="smart">
+                                    <a href="smartterminal.html" class="smart"><span class="icon"></span> <div class="linktext">Smart Terminal</div></a>
+                                </li>
+                                <li class="pay">
+                                        <a href="payattable.html" class="pay"><span class="icon"></span> <div class="linktext">Pay at the Table</div></a>
+                                    </li>
+                            </ul>
                         </li>
-                        <li class="casual active">
-                            <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
+                        <li>
+                            <a href="conversationstarters.html">Conversation Starters</a>
                         </li>
-                        <li class="fine">
-                            <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
-                        </li>
-                        <li class="mobile">
-                                <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
+                        <li>
+                                <a href="competitivecomparisons.html">Competitive Comparison</a>
                             </li>
+                            <li>
+                                    <a href="faqs.html">FAQs</a>
+                                </li>
                     </ul>
-                </li>
-                <!-- <li>
-                    <a href="#">Customers</a>
-                </li> -->
-                <li>
-                    <a href="tablet.html">Solutions</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Conversation Starters</a>
-                </li>
-                <li>
-                        <a href="#">Competitive Comparison</a>
-                    </li>
-                    <li>
-                            <a href="#">FAQs</a>
-                        </li>
-            </ul>
-    
-        </nav>
-        </div>
+            
+                </nav>
+                </div>
+   <div class="main-image casual">
+        <div class="Text-xl">
+                <h1>Casual Dining</h1>
+            </div> 
+   </div>       
+    <div class="wrapper">    
         <!-- Page Content -->
-        <div id="content">
-              <!-- <div class="content-wrapper"> -->
-                <div class="Text-xl">
-                        <h1>Casual Dining</h1>
-                       
-                    </div>   
-              </div> 
               <div  class="lower-content overview col-sm-12 row columns">
                   <div class="col-sm-6">
                     <div class="lower-title">Friends. Family. Frictionless.</div>
@@ -130,17 +129,7 @@
      <script src="../js/popper.min.js"></script>
      <!-- Bootstrap JS -->
      <script src="../js/bootstrap.min.js"></script>
-    <script>$(document).ready(function () {
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-        $('button.find').on('click', function(){
-            window.location.href = $(this).data("href");
-        });
-    
-    });
-    </script>
+   
 </body>
 
 </html>

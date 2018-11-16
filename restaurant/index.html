@@ -22,6 +22,10 @@
 <body class="restaurant"> 
     <header>
             <nav class="navbar  navbar-light fixed-top bg-light">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info menu-toggle" aria-expanded="false">
+                            <!-- <i class="fas fa-align-left"></i> -->
+                            <span></span>
+                        </button>
                     <a class="navbar-brand" href="http://www.elavon.com"></a>
                     <ul class="nav-top">
                         <li class="active"><a href="../restaurant/index.html">Restaurant</a></li>
@@ -29,70 +33,41 @@
                     <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
                   </nav>
             </header>
-            <!-- <main role="main" class="container"> -->
+            <!-- Side Nav -->
+             <!-- Sidebar -->
+        <div class="sidebar-wrapper">
+                <nav id="sidebar">
+                    <ul class="list-unstyled components">
+                            <li class="active">
+                                    <a data-toggle="collapse" aria-expanded="true" href="#">Overview</a>
+                                </li>
+                        <li>
+                            <a href="qsr.html" aria-expanded="false">Customers</a>
+                        </li>
+                        <li>
+                            <a href="solutions.html">Solutions</a>
+                        </li>
+                        <li>
+                            <a href="conversationstarters.html">Conversation Starters</a>
+                        </li>
+                        <li>
+                                <a href="competitivecomparisons.html">Competitive Comparison</a>
+                            </li>
+                            <li>
+                                    <a href="faqs.html">FAQs</a>
+                                </li>
+                    </ul>
+             <div class="references-wrapper">
+                    <div class="references-link">
+                        <a href="#" data-toggle="modal" data-target="#referencesModal">References</a>
+                    </div>
+                </div>
+                </nav>
+               
+                </div>
                  
     <div class="wrapper">
-        <!-- Sidebar -->
-        <div class="sidebar-wrapper">
-        <nav id="sidebar">
-           
-    
-            <ul class="list-unstyled components">
-                    <li class="active">
-                            <a data-toggle="collapse" aria-expanded="true" href="#">Overview</a>
-                        </li>
-                <li>
-                    <a href="qsr.html" aria-expanded="false">Customers</a>
-                    <ul class="collapse list-unstyled" id="customerSubmenu">
-                        <li class="qsr">
-                           <a href="#" data-toggle="collapse" aria-expanded="true" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
-                        </li>
-                        <li class="casual">
-                            <a href="#" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
-                        </li>
-                        <li class="fine">
-                            <a href="#" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
-                        </li>
-                        <li class="mobile">
-                                <a href="#" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
-                            </li>
-                    </ul>
-                </li>
-                <!-- <li>
-                    <a href="#">Customers</a>
-                </li> -->
-                <li>
-                    <a href="tablet.html">Solutions</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Conversation Starters</a>
-                </li>
-                <li>
-                        <a href="#">Competitive Comparison</a>
-                    </li>
-                    <li>
-                            <a href="#">FAQs</a>
-                        </li>
-            </ul>
-     <div class="references-wrapper">
-            <div class="references-link">
-                <a href="#" data-toggle="modal" data-target="#referencesModal">References</a>
-            </div>
-        </div>
-        </nav>
        
-        </div>
         <!-- Page Content -->
         <div id="content">
               <!-- <div class="content-wrapper"> -->
@@ -132,21 +107,7 @@
      <script src="../js/popper.min.js"></script>
      <!-- Bootstrap JS -->
      <script src="../js/bootstrap.min.js"></script>
-    <script>$(document).ready(function () {
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-        $('button.find').on('click', function(){
-            window.location.href = $(this).data("href");
-        });
-
-        // $('.references-link').on('click', 'a', function(){
-        //     $('#referencesModal').modal('show');
-        // })
-    
-    });
-    </script>
+    <script src="../js/product-selector.js"></script>
     <!-- Modal -->
 <div class="modal fade" id="referencesModal" tabindex="-1" role="dialog" aria-labelledby="refrencesModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

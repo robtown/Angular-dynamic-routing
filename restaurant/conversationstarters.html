@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Elavon Product Selector</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   
+</head>
+
+<body class="conversation side-nav-closed"> 
+    <header>
+            <nav class="navbar  navbar-light fixed-top">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info menu-toggle" aria-expanded="false">
+                            <!-- <i class="fas fa-align-left"></i> -->
+                            <span></span>
+                        </button>
+                    <a class="navbar-brand" href="http://www.elavon.com"></a>
+                   
+                    <ul class="nav-top">
+                        <li class="active"><a href="index.html">Restaurant</a></li>
+                    </ul>
+                    <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
+                  </nav>
+            </header>
+                   <!-- Sidebar -->
+        <div class="sidebar-wrapper">
+                <nav id="sidebar">
+                   
+            
+                    <ul class="list-unstyled components">
+                            <li>
+                                    <a href="index.html">Overview</a>
+                                </li>
+                        <li>
+                            <a href="qsr.html">Customers</a>
+                            <ul class="collapse list-unstyled" id="customerSubmenu">
+                                <li class="qsr">
+                                   <a href="qsr.html" class="qsr"><span class="icon"></span> <div class="linktext">QSR</div></a>
+                                </li>
+                                <li class="casual">
+                                    <a href="casual.html" class="casual"><span class="icon"></span> <div class="linktext">Casual Dining</div></a>
+                                </li>
+                                <li class="fine">
+                                    <a href="finedining.html" class="fine"><span class="icon"></span> <div class="linktext">Fine Dining</div></a>
+                                </li>
+                                <li class="mobile active">
+                                        <a href="mobile.html" class="mobile"><span class="icon"></span> <div class="linktext">Mobile/Food Truck</div></a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Customers</a>
+                        </li> -->
+                        <li >
+                            <a href="solutions.html">Solutions</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li class="tablet">
+                                    <a href="#" data-href="tablet" class="tablet"><span class="icon"></span> <div class="linktext">Tablet POS</div></a>
+                                </li>
+                                <li class="ecommerce">
+                                    <a href="#" data-href="ecommerce" class="ecommerce"><span class="icon"></span> <div class="linktext">eCommerce</div></a>
+                                </li>
+                                <li class="smart">
+                                    <a href="#" data-href="smart" class="smart"><span class="icon"></span> <div class="linktext">Smart Terminal</div></a>
+                                </li>
+                                <li class="pay">
+                                        <a href="#" data-href="pay" class="pay"><span class="icon"></span> <div class="linktext">Pay at the Table</div></a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="conversationstarters.html">Conversation Starters</a>
+                        </li>
+                        <li>
+                                <a href="competitivecomparisons.html">Competitive Comparison</a>
+                            </li>
+                            <li>
+                                    <a href="faqs.html">FAQs</a>
+                                </li>
+                    </ul>
+            
+                </nav>
+                </div>
+            <!-- <main role="main" class="container"> -->
+   <div class="main-image conversation">
+       <div class="Text-xl text-xl-solutions">
+                <h1>Conversation</h1>
+                <h1>Starters</h1>
+            </div>   
+        </div>       
+    <div class="wrapper">
+ 
+        <!-- Page Content -->
+        <!--  <div id="content">
+             <div class="content-wrapper"> -->
+                <!-- <div class="Text-xl text-xl-solutions">
+                        <h1>Conversation</h1>
+                        <h1>Starters</h1>
+                    </div>    
+              </div> -->
+
+              <!-- collapsing lists -->
+              <div id="collapse-accordion" class="lower-content overview conversation col-sm-12 row columns justify-content-left"> 
+                 
+                  <div class="col-sm-12 row row-eq-height collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter1" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Does your current processing provider specialize in restaurants?</p></a></div>
+                    <div id="coversationStarter1" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Experienced team and set of solutions dedicated to enhancing the restaurant experience </p></div>
+                      
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Specific account for your restauarant</p></div>
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter2" data-parent="#collapse-accordion" role="button" aria-expanded="false" aria-controls="coversationStarter2">
+                            <p>Does your current processing services provider handle all your processing needs?</p></a></div>
+                    <div id="coversationStarter2" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item">
+                            <p>We provide full authorization, processing, settlement and support for your Visa®, MasterCard®, American Express®, 
+                                Discover® Network, JCB, UnionPayand Diner’s Club International® credit and debit card transactions. In addition, 
+                                our network enables your restaurant to accept: EMV (i.e. Chip Card), PIN Debit Cards and Contactless (i.e. Apple Pay®).</p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter3" data-parent="#collapse-accordion" role="button" aria-expanded="false" aria-controls="coversationStarter2">
+                            <p>Does your current processing services provider offer the latest payment technologies?</p></a></div>
+                    <div id="coversationStarter3" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Boudin landjaeger filet mignon chuck, pork chop tenderloin kielbasa dolore enim mollit ea lorem.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Kevin short ribs laboris burgdoggen meatball cupidatat. </p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter4" data-parent="#collapse-accordion" role="button" aria-expanded="false" aria-controls="coversationStarter4">
+                            <p>Do you currently offer (or have thought about offering) online/mobile order ahead? </p></a></div>
+                    <div id="coversationStarter4" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Boudin landjaeger filet mignon chuck, pork chop tenderloin kielbasa dolore enim mollit ea lorem.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Kevin short ribs laboris burgdoggen meatball cupidatat. </p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter5" data-parent="#collapse-accordion" role="button" aria-expanded="false" aria-controls="coversationStarter5">
+                            <p>Do you feel you have proper protection in place for cardholder data?</p></a></div>
+                    <div id="coversationStarter5" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Kevin short ribs laboris burgdoggen meatball cupidatat. </p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Boudin landjaeger filet mignon chuck, pork chop tenderloin kielbasa dolore enim mollit ea lorem.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter6" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Are you getting the kind of detailed reporting you need for effective insight and analysis?</p></a></div>
+                    <div id="coversationStarter6" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Strip steak commodo bacon swine magna labore pork belly cupidatat esse pastrami in rump cupim </p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Enim meatloaf biltong, hamburger tail do swine strip steak dolor frankfurter in sirloin irure commodo</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter7" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Would you be interested in getting your funds faster?</p></a></div>
+                    <div id="coversationStarter7" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Enim meatloaf biltong, hamburger tail do swine strip steak dolor frankfurter in sirloin irure commodo</p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Strip steak commodo bacon swine magna labore pork belly cupidatat esse pastrami in rump cupim </p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter8" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Do you find managing chargebacks and retrievals challenging?</p></a></div>
+                    <div id="coversationStarter8" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon ipsum dolor amet shank dolore prosciutto est. Est pariatur doner tail biltong eiusmod sausage do kevin sirloin ball tip brisket. Venison jowl velit ex.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Enim meatloaf biltong, hamburger tail do swine strip steak dolor frankfurter in sirloin irure commodo</p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Strip steak commodo bacon swine magna labore pork belly cupidatat esse pastrami in rump cupim </p>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter9" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Do you currently have a loyalty, gift or promotions program? Is it integrated with your POS or managed separately?</p></a></div>
+                    <div id="coversationStarter9" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Bacon strip steak porchetta, turkey doner chuck meatball fatback pastrami ground round andouille hamburger corned beef pork loin kevin. Brisket doner frankfurter shoulder, kevin tail salami leberkas bacon alcatra pork andouille.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Buffalo pork chop bacon ham hock tongue frankfurter flank salami alcatra drumstick pork. </p>
+                        </div> 
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter10" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Do you serve international customers?</p></a></div>
+                    <div id="coversationStarter10" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Ribeye corned beef sirloin, doner prosciutto flank sausage ball tip buffalo leberkas shank pancetta.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Corned beef boudin tongue chuck, ribeye pork pork belly burgdoggen alcatra kielbasa fatback andouille. </p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Buffalo pork chop bacon ham hock tongue frankfurter flank salami alcatra drumstick pork. </p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Flank turducken pork chop turkey rump ball tip prosciutto, jerky pork </p>
+                        </div> 
+                        
+                    </div>
+                   
+                </div>
+
+                <!-- <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter11" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Do you serve international customers?</p></a></div>
+                    <div id="coversationStarter11" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Filet mignon andouille leberkas, meatball burgdoggen rump ball tip frankfurter. Bresaola ham jerky short ribs bacon, ham hock flank turkey tenderloin kielbasa tail shank ball tip.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Pork chop shankle ball tip cupim, cow venison beef brisket. </p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Pork chop bacon ham hock tongue frankfurter flank salami alcatra drumstick pork. </p>
+                        </div> 
+                        
+                    </div>
+                   
+                </div> -->
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter12" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Do you currently offer alternative payment types such as mobile wallets like Apple Pay or Google Pay?</p></a></div>
+                    <div id="coversationStarter12" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Pork chop shankle ball tip cupim, cow venison beef brisket. </p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Filet mignon andouille leberkas, meatball burgdoggen rump ball tip frankfurter. Bresaola ham jerky short ribs bacon, ham hock flank turkey tenderloin kielbasa tail shank ball tip.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Pork chop bacon ham hock tongue frankfurter flank salami alcatra drumstick pork. </p>
+                        </div> 
+                        
+                    </div>
+                   
+                </div>
+
+                <div class="col-sm-12 row row-eq-height justify-content-around collapse-wrapper">
+                   
+                        <div class="col-sm-12 collapse-trigger"><a class="callout-title" data-toggle="collapse" href="#coversationStarter13" data-parent="#collapse-accordion" role="button" aria-expanded="false">
+                            <p>Have you considered rolling out a Pay-at-the-Table or wireless payment solution?</p></a></div>
+                    <div id="coversationStarter13" class="lower-ul collapse collapsible-div" data-parent="#collapse-accordion">
+                       <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Tongue spare ribs turkey shank bresaola sausage ball tip cupim pastrami porchetta ham.  </p>
+                        </div> 
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Corned beef boudin tongue chuck, ribeye pork pork belly burgdoggen alcatra kielbasa fatback andouille.</p>
+                        </div>
+                        <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i>
+                            <p>Pork chop bacon ham hock tongue frankfurter flank salami alcatra drumstick pork. </p>
+                        </div> 
+                        
+                    </div>
+                   
+                </div>
+              </div> <!-- Lower Content-->
+        <!-- </div> -->
+    </div>
+<!-- </main> -->
+
+     <!-- jQuery -->
+     <script src="../js/jquery-3.3.1.min.js"></script>
+     <!-- Popper.JS -->
+     <script src="../js/popper.min.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="../js/bootstrap.min.js"></script>
+    
+    <script src="../js/product-selector.js"></script>
+</body>
+
+</html>

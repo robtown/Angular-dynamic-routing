@@ -15,7 +15,7 @@ import { routerTransition } from './app-routing/router.animations';
 export class AppComponent{
   
   constructor(private questionsService: QuestionsService) { }
- 
+    qs: any = this.questionsService;
       getState(outlet) {
         return outlet.activatedRouteData.state;
       }

@@ -28,6 +28,7 @@ export class PrequestionsComponent implements OnInit{
   loaded: boolean = false;
   
   constructor(private questionsService: QuestionsService) { }
+  qs: any = this.questionsService;
   title:any;
   ngOnInit() {
       this.questionsService.questionsObservable.subscribe(res=>{
