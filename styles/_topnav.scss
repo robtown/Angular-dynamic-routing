@@ -80,7 +80,7 @@
             li{
 
                 a{
-                    text-decoration: underline;
+                   // text-decoration: underline;
                     color: $link-gray;
                    
                 }
@@ -94,9 +94,25 @@
         }
     }
 
+    
     @media screen and (max-width:768px){
         .find{
             //display:none;
         }
     }
+
+    @media screen and (max-width:576px){
+
+        .navbar-brand{
+            margin-right:0;
+        }
+        ul{
+
+            &.nav-top{
+                margin-left: 0;
+                float:right;
+            }
+        }
+    }
+
 }

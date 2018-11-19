@@ -14,19 +14,23 @@
     <link rel="stylesheet" href="../css/styles.css">
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="../js/solid.js"></script>
+    <script defer src="../js/fontawesome.js" ></script>
    
 </head>
 
 <body class="products"> 
     <header>
             <nav class="navbar  navbar-light fixed-top bg-light">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info menu-toggle" aria-expanded="false">
+                            <!-- <i class="fas fa-align-left"></i> -->
+                            <span></span>
+                        </button>
                     <a class="navbar-brand" href="http://www.elavon.com"></a>
                     <ul class="nav-top">
                         <li class="active"><a href="index.html">Restaurant</a></li>
                     </ul>
-                    <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
+                    <button class="find mt-2 mt-md-0 d-none d-sm-block" data-href="product-selector/index.html">Find the right product</button>
                   </nav>
             </header>
  <!-- Sidebar -->
@@ -71,6 +75,14 @@
                     <li>
                             <a href="faqs.html">FAQs</a>
                         </li>
+                        <li class="d-block d-sm-none">
+                                <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
+                            </li>
+                            <li>
+                                    <div class="references-wrapper">
+                                           
+                                        </div>
+                            </li>
             </ul>
     
         </nav>
@@ -88,9 +100,9 @@
                     <p class="body-copy">Offer your QSR customers payment solutions that can keep up with their fast-paced environment.</p>
                     <p class="callout-title">Best solutions for QSR's</p>
                     <div class="buttons-wrapper">
-                        <a href="#" class="btn btn-primary" role="button">Tablet POS</a> <a href="#" class="btn btn-primary" role="button">Smart Terminal</a>
+                        <a href="solutions.html#tablet" class="btn btn-primary" role="button">Tablet POS</a> <a href="solutions.html#smart" class="btn btn-primary" role="button">Smart Terminal</a>
                     </div>
-                    <a href="#">See all payment solutions ></a>
+                    <a href="solutions.html">See all payment solutions ></a>
                 </div>
                   <div class="col-sm-6">
                         <p class="callout-title">QSR Snapshot</p>
@@ -113,6 +125,21 @@
      <script src="../js/popper.min.js"></script>
      <!-- Bootstrap JS -->
      <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/product-selector.js"></script>
+
+     <!-- Google Analytics -->
+    <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+          ga('create', 'UA-5945146-1', 'auto');
+          ga('send', 'pageview');
+         
+        </script>
+         
+        <!-- End Google Analytics --> 
 
 </body>
 

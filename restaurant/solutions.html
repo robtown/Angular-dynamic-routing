@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../css/styles.css">
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="../js/solid.js"></script>
+    <script defer src="../js/fontawesome.js" ></script>
    
 </head>
 
@@ -31,7 +31,7 @@
                     <ul class="nav-top">
                         <li class="active"><a href="index.html">Restaurant</a></li>
                     </ul>
-                    <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
+                    <button class="find mt-2 mt-md-0 d-none d-sm-block" data-href="product-selector/index.html">Find the right product</button>
                   </nav>
             </header>
             <!-- <main role="main" class="container"> -->
@@ -88,6 +88,14 @@
                             <li>
                                     <a href="faqs.html">FAQs</a>
                                 </li>
+                                <li class="d-block d-sm-none">
+                                        <button class="find mt-2 mt-md-0" data-href="product-selector/index.html">Find the right product</button>
+                                    </li>
+                                    <li>
+                                            <div class="references-wrapper">
+                                                   
+                                                </div>
+                                    </li>
                     </ul>
             
                 </nav>
@@ -101,19 +109,22 @@
     </div>       
     <div class="wrapper">
         <!-- Page Content -->
+            <div id="tablet" class="topnav-spacer"></div>
         
-              <div id="tablet" class="lower-content overview solutions col-sm-12 d-flex row columns justify-content-left"> 
+              <div class="lower-content overview solutions col-sm-12 d-flex row columns justify-content-left"> 
                   <div class="lower-title col-12">Tablet POS</div>
-                  <div class="row">
+                  <div class="row solution-row">
                         <div class="col-sm-12 col-md-6 align-items-end">
-                            <div class="solution-image">
+                            <div class="solution-image1">
                                 <img src="../images/solutions/NCR-Pro.png" /></div>
-                                <div class="col-sm-12 solution-callout"><p class="callout-title">NCR Pro</p></div>
+                                <div class="col-sm-12 solution-callout"><p class="callout-title">NCR Pro</p>
+                                   <p class="callout-text">Advanced solutions for full-service restaurants that need it all</p>
+                                </div>
                                     <div class="lower-ul">
                                         <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$1M+ processing/site/year</p></div>
                                       
                                         <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 sites</p></div>
-                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 SKUs</p></div>
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 50 SKUs</p></div>
                 
                                                 <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Counter and drive-thru POS</p></div>
                                                     <div class="list-item"><div class="bullet"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i></div><p>Advanced operations (tablet layout, split ticket, etc.) and back-end (expanded user roles, advanced labor, etc.) features</p></div>
@@ -121,14 +132,14 @@
                         </div>
 
                         <div class="col-sm-12 col-md-6 align-items-end">
-                                <div class="solution-image">
+                                <div class="solution-image1">
                                     <img src="../images/solutions/NCR-Silver.png" /></div>
                                     <div class="col-sm-12 solution-callout"><p class="callout-title">NCR Silver</p>
                                      <p class="callout-text">Frictionless customer engagement and powerful payment acceptance, all in one package</p></div>
                                      <div class="lower-ul">
                                             <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>$200K to $500K processing volume/site/year</p></div>
-                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 sites</p></div>
-                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 500 SKUs</p></div>
+                                            <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>More than 500 sites</p></div>
+                                                <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Up to 50 SKUs</p></div>
                                                     <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Counter and drive-thru POS</p></div>
                                                         <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Best for restaurants with limited counter space and a need for strong operations and back-end features at an affordable price </p></div>
                                     </div>
@@ -136,10 +147,10 @@
     
                         </div>
 
-                        <div class="row">
+                        <div class="row solution-row">
 
                                 <div class="col-sm-12 col-md-6 align-items-end">
-                                        <div class="solution-image">
+                                        <div class="solution-image2">
                                                 <img src="../images/solutions/taltech-Premium.jpg" />
                                             </div>
                                             <div class="col-sm-12 solution-callout">
@@ -157,7 +168,7 @@
                                                 </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 align-items-end">
-                                        <div class="solution-image">
+                                        <div class="solution-image2">
                                                 <img src="../images/solutions/taltech-Standard.jpg" />
                                             </div>
                                             <div class="col-sm-12 solution-callout">
@@ -177,10 +188,10 @@
                         </div>
 
 
-                        <div class="row">
+                        <div class="row solution-row">
 
                                 <div class="col-sm-12 col-md-6 align-items-end">
-                                        <div class="solution-image">
+                                        <div class="solution-image3">
                                                 <img src="../images/solutions/taltech-Starter.jpg" />
                                          </div>
                                          <div class="col-sm-12 solution-callout">
@@ -197,11 +208,11 @@
                                                     </div>
                                  </div>
                                  <div class="col-sm-12 col-md-6 align-items-end">
-                                        <div class="solution-image">
+                                        <div class="solution-image3">
                                                 <img src="../images/solutions/taltech-on-Moby-or-Poynt.jpg" />  
                                          </div>
                                          <div class="col-sm-12 solution-callout">
-                                                <p class="callout-title">talech Standard</p>
+                                                <p class="callout-title">talech on Moby M70 or Poynt</p>
                                                 <p class="callout-text">Powerful tablet POS. For payments and more.</p>
                                          </div>
                                          <div class="lower-ul">
@@ -218,8 +229,9 @@
 
                   </div>
             <hr>
-            <div id="ecommerce" class="lower-title lower-spacer col-12">eCommerce</div>
-                  <div class="row">
+            <div id="ecommerce" class="topnav-spacer"></div>
+            <div class="lower-title lower-spacer col-12">eCommerce</div>
+                  <div class="row solution-row">
                         <div class="col-sm-12 col-md-6 align-items-end">
                                  <div class="col-sm-12 solution-callout">
                                         <p class="callout-title">NCR Silver Commerce - Add on</p>
@@ -256,8 +268,9 @@
                  
 
                 <hr>
-                <div  id="smart" class="lower-title lower-spacer col-12">Smart Terminal</div>
-                <div class="row">
+                <div id="smart" class="topnav-spacer"></div>
+                <div class="lower-title lower-spacer col-12">Smart Terminal</div>
+                <div class="row solution-row">
                         <div class="col-sm-12 col-md-6 align-items-end">
                                 <div class="solution-image">
                                 <img src="../images/solutions/smart-terminal.jpg"/>
@@ -284,12 +297,13 @@
                 </div>
 
                 <hr>
-                <div id="pay" class="lower-title lower-spacer col-12">Pay at the Table</div>
-                  <div class="row">
+                <div id="pay" class="topnav-spacer"></div>
+                <div class="lower-title lower-spacer col-12">Pay at the Table</div>
+                  <div class="row solution-row">
                         <div class="col-sm-12 col-md-6 align-items-end">
                                 <div class="col-sm-12 solution-callout">
                                         <p class="callout-title">Poynt 5</p>
-                                        <p class="callout-text">Ultra-mobile. Ultra-smart</p>
+                                        <p class="callout-text">Ultra-mobile. Ultra-smart.</p>
                                         </div>
                                         <div class="lower-ul">
                                                 <div class="list-item"><i class="fas fa-circle fa-1x" style="width:7px;float:left;padding-top:4px;"></i><p>Runs Poynt or talech POS system</p></div>
@@ -308,9 +322,9 @@
 
                   </div>
 
-                  <div class="row">
+                  <div class="row solution-row">
                         <div class="col-sm-12 col-md-6 align-items-end">
-                                <div class="solution-image">
+                                <div class="solution-image3">
                                         <img src="../images/solutions/Ingenico-long-range-add-on.png" />
                                 </div>
                                 <div class="col-sm-12 solution-callout">
@@ -326,7 +340,7 @@
                                        
                              </div>
                              <div class="col-sm-12 col-md-6 align-items-end">
-                                    <div class="solution-image">
+                                    <div class="solution-image3">
                                             <img src="../images/solutions/Ingenico-short-range-add-on.png" />
                                     </div>
                                     <div class="col-sm-12 solution-callout">
@@ -344,7 +358,7 @@
                   </div>
               </div> <!-- Lower Content-->
         <!-- </div> -->
-    </div>
+  
 <!-- </main> -->
 
      <!-- jQuery -->
@@ -356,12 +370,36 @@
      <script src="../js/jquery.matchHeight-min.js"></script>
     <script src="../js/product-selector.js"></script>
     <script>
+        var scrollto = false;
+         if(window.location.hash) {
+                // Fragment exists
+                console.log(window.location.hash);
+                } else {
+                // Fragment doesn't exist
+                }
+
+    
     $(document).ready(function () {
-        $('.solution-image').matchHeight();
+        $('.solution-image1').matchHeight();
+        $('.solution-image2').matchHeight();
+        $('.solution-image3').matchHeight();
         $('.solution-callout').matchHeight();
         
          });
     </script>
+    <!-- Google Analytics -->
+<script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+          ga('create', 'UA-5945146-1', 'auto');
+          ga('send', 'pageview');
+         
+        </script>
+         
+        <!-- End Google Analytics --> 
 </body>
 
 </html>

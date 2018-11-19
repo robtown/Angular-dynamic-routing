@@ -48,7 +48,7 @@ export class QuestionsService {
   // Functions for manipulating the answers
   public updateQuestions(event:any){
     const newVal = event.value == undefined ? event.currentTarget.value : event.value;
-        console.log(newVal);
+       // console.log(newVal);
         let thisId = event.data == undefined ? Number(event.currentTarget.dataset.questionId) : event.data[0].additional["question"];
     switch(thisId){
       case 0:
@@ -75,7 +75,13 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q1";
       fullAns.textAnswer = answer[0].answer;
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+       // console.log( this.fullAnswers[idx].textAnswer);
+        this.fullAnswers[idx].textAnswer = answer[0].answer;
+      }else{
       this.fullAnswers.push(fullAns);
+      }
       break;
       case 4:
 
@@ -84,7 +90,12 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q2";
       fullAns.textAnswer = answer[0].answer;
-      this.fullAnswers.push(fullAns);
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+        this.fullAnswers[idx].textAnswer = answer[0].answer;
+      }else{
+        this.fullAnswers.push(fullAns);
+      }
       break;
       case 5:
 
@@ -93,14 +104,26 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q3";
       fullAns.textAnswer = answer[0].answer;
-      this.fullAnswers.push(fullAns);
+
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+        this.fullAnswers[idx].textAnswer = answer[0].answer;
+      }else{
+       this.fullAnswers.push(fullAns);
+      }
       break;
+
       case 6:
       var answer = this.questions[3].answers.filter(answr=> answr.id == newVal);
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q4";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+        this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+      }else{
       this.fullAnswers.push(fullAns);
+      }
       break;
       case 7:
 
@@ -109,7 +132,12 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q5";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+        this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+      }else{
       this.fullAnswers.push(fullAns);
+      }
       break;
       case 8:
 
@@ -118,7 +146,12 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q6";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      var idx = this.getFullAnswerExist(fullAns.questionNum);
+      if(idx != -1){
+        this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+      }else{
       this.fullAnswers.push(fullAns);
+      }
       break;
     }
 
@@ -162,7 +195,7 @@ export class QuestionsService {
     
       this.selectedProducts.push(this.question8);
     }
-    console.log(this.selectedProducts);
+    //console.log(this.selectedProducts);
   }
 
   // Reset all pertinent arrays and the main questions if question #1 (US/CANADA) is answered.
@@ -208,6 +241,12 @@ export class QuestionsService {
         }
     
         return jQuery('<span class="select-option-span">' + image + ' ' + state.text + '</span>');
+      }
+
+      private getFullAnswerExist(qnum:string):number{
+         var ret = this.fullAnswers.findIndex(x => x.questionNum == qnum);
+        // console.log('test' + ret);
+         return ret;
       }
       
 

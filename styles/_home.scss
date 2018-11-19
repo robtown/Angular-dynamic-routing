@@ -9,6 +9,96 @@
         background-repeat:no-repeat;
         background-position: center top;
         background-size:cover;
+
+            .Text-xl{
+                padding-top:30%;
+                h1{
+                font-size:8rem;
+                    }
+                }
+
+            .bottom-section{
+                width: calc(100% - 265px);
+                display:table;
+                position:absolute;
+                bottom: 0;
+                padding-bottom:2%;
+        
+                .bottom-right-stats{
+                    display:table;
+                    float: right;
+                    clear:both;
+                    h3{
+                        font-size: 2rem;
+                        margin-bottom:0;
+                        color:white;
+                        font-family: nimbus-sans, san-serif;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 2rem;
+                        line-height:2.3rem;
+                        color:white;
+                        font-family: nimbus-sans, san-serif;
+                        font-weight: 400;
+                        float:right;
+                        margin-right:15%;
+                        max-width:290px;
+                    }
+        
+                    // @media screen and (max-width: 768px){
+                    //     p{
+                    //         max-width:270px;
+                    //     }
+                    // }
+                    
+                    
+                }
+            }
+
+            button{
+                &.find{
+                    color: $white;
+                    background: $btn-green;
+                    border-color: $btn-green;
+                    font-family: nimbus-sans, san-serif;
+                    font-size: 1.2em;
+                    border-radius: 4px;
+                    padding: .6rem .9rem;
+                    float: right;
+                    cursor: pointer;
+                    margin-top: 80px !important;
+                    margin-right: 15px;
+                    width: calc(100% - 30px);
+                }
+            }
+        
+
+            @media screen and (max-width: 1024px){
+
+                .Text-xl{
+
+                    h1{
+                        font-size:6rem;
+                        padding-left: 1rem;
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: 768px){
+
+                .bottom-section{
+                    width: 100%;
+                    .bottom-right-stats{
+                        p{
+                           // max-width:215px;
+                            margin-right:7%;
+                            width:100%;
+                        }
+                    }
+                }
+            }
         }
         
 }

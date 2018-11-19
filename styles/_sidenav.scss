@@ -67,9 +67,24 @@ max-width: 250px;
 background: $nav-bg-gray;
 color: $link-gray;
 transition: all 0.3s;
-padding: 0 0 150px;
+padding: 0 0 5px;
 //position:relative;
+
+        .find {
+            color: $white;
+            background: $btn-green;
+            font-family: nimbus-sans, san-serif;
+            font-size: .9em;
+            //margin: 3%;
+            border-radius: 0;
+            padding: .7rem .9rem;
+            //float: right;
+            cursor: pointer;
+            width: 100%;
+        }
+
 }
+
 #sidebar .sidebar-header {
 padding: 20px;
 background: #6d7fcc;
@@ -78,6 +93,9 @@ background: #6d7fcc;
 #sidebar ul.components {
 padding: 0;
 //border-bottom: 1px solid #47748b;
+
+      li{
+      }
 }
 
 #sidebar ul p {
@@ -93,6 +111,10 @@ padding: 10px;
     padding-left:20px;
     width: 100%;
     display: table;
+
+    &:last-of-type{
+        border-bottom:none;
+    }
 }
 #sidebar ul li a:hover {
 color: $active-purple;
@@ -322,10 +344,16 @@ position: relative;
     nav{
 
         .references-wrapper{
-            position: absolute;
-            bottom: 0;
-            padding: 130px 0px 20px 20px;
-            z-index: 1;
+            //position: absolute;
+           // bottom: 0;
+           // padding: 130px 0px 20px 20px;
+           // z-index: 1;
+
+           padding-top:50px;
+
+           .references-link{
+            padding-top:30px;
+           }
 
             a{
                 color: $link-gray;

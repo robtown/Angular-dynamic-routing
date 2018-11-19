@@ -1,14 +1,41 @@
-table{
-    &.compare-table{
-        td{
-            border: thin solid $link-gray;
-            vertical-align: top;
-            padding: 5px;
-            line-height: 18px;
+body{
 
-            ul{
-                padding-left: 20px;
+    &.compare{
+
+            .wrapper{
+                padding-top:2.2rem;
             }
-        }
-    }
-}
+
+            table{
+                &.compare-table{
+                    tr{
+                            td{
+                                border: thin solid $link-gray;
+                                vertical-align: top;
+                                padding: 5px;
+                                line-height: 18px;
+
+                                ul{
+                                    padding-left: 20px;
+                                }
+                            }
+
+                            &:first-of-type{
+                                color: $blue;
+                            }
+                            &:nth-of-type(2){
+                                color: $blue;
+                            }
+                            &:nth-of-type(3){
+                                color: $qsr-red;
+                            }
+                            &:nth-of-type(4){
+                                color: $link-blue;
+                            }
+                    }
+
+                }
+            }
+        } // .compare
+
+} //body
