@@ -18,6 +18,7 @@ export interface Questions {
     text:  string;
     value: string;
     icon?: string;
+    image?: string;
   }
   
   export interface QuestionClass {

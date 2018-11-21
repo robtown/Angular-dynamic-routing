@@ -7,7 +7,7 @@
             
                <!-- <select2 [data]="questionsService.questions[0].answers" [width]="240" [cssImport]=true (valueChanged)="onChange($event)" [options]="options" [value]="question4"><option></option></select2> -->
             <div class="col-sm-12"  >
-               <button type="button" class="btn btn-primary" data-question-id="8" [ngClass]="{'selected':questionsService.question8 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}</button>
+               <button type="button" class="btn btn-primary" data-question-id="8" [ngClass]="{'selected':questionsService.question8 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}, {{ button.answer }}</button>
              </div>
              
              </div>

@@ -1,6 +1,7 @@
 @import '/variables/styles-variables';
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
+@import '_results';
 
 html, body {
     height: 100%;
@@ -175,14 +176,16 @@ box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
         }
 
         .continue-button-wrapper{
-            padding: 4rem 0 2rem;
-           button{
+            padding: 4rem 0 3rem;
+            text-align: center;
+           button, a {
                background: $lt-blue;
                min-width: 200px;
-               padding-top: .25rem;
-               padding-bottom: .25rem;
+               padding-top: .45rem;
+               padding-bottom: .45rem;
                p{
                    font-size:1.1rem;
+                   margin-bottom:0;
                    i{
                        margin-right:10px;
                        font-size:1.0rem;
@@ -236,12 +239,6 @@ box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
                 color: #666;
             }
         }
-       }
-
-       .results-wrapper{
-           max-width:800px;
-           margin:1rem auto;
-           
        }
 }
 

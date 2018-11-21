@@ -1,22 +1,43 @@
-<div class="questions-body col-sm-12">
+<div  *ngIf="loaded" class="main-results-image {{ selectedClass }}" [ngStyle]="{'background-image':'url(../../../restaurant/results/'+main_image+')','background-repeat':'no-repeat','background-size':'cover','background-position':'center'}">
+    <h2>{{ selected }}</h2>
+</div>
+<div class="results-body col-sm-12">
        
-        <div *ngIf="loaded" class="questions-wrapper">
-            <div class="questions-counter"><p>Results</p>
+        <div *ngIf="loaded">
+         
+
+         
+            <div class="results-title"><p>Your Results</p></div>
             <div class="row results-wrapper">
-                <div *ngIf="results" class="row">
-                  <div *ngFor="let answer of results" class="col-sm-12 row columns">
-                    <div class="col-sm-1">{{ answer.questionNum }}</div><div class="col-sm-11" style="text-align:left;">{{ answer.textAnswer }}</div>
+                <div *ngIf="results" class="row d-flex answer-row">
+                  <div *ngFor="let answer of results" class="answer">
+                    <p class="answer-num">{{ answer.questionNum }}</p><p class="answer-answer"><span class="bold-blue">{{ answer.text }}</span>, {{ answer.textAnswer }}</p>
                     </div>
               </div>
-         <hr style="height:1px;width:100%;">
-              <div *ngIf="products" class="col-sm-12">
-                <div *ngFor="let product of products | filterProducts: questionsService.selectedProducts">
-                  {{ product.product }}
+              <div class="col-sm-12 continue-button-wrapper">
+                <button type="button" class="btn btn-primary" (click)="startOver($event)"><p>Start Over <i class="far fa-chevron-circle-right"></i></p></button>
+              </div>
+        
+              <div class="col-sm-12 results-title"><p>Recommended Solution(s)</p></div>
+              <div *ngIf="products" class="col-sm-12 product-rows row">
+                <div *ngFor="let product of products | filterProducts: questionsService.selectedProducts" class="product row">
+                  <div class="product-image col-sm-4 {{ product.class }}" [ngStyle]="{'background-image':'url(../../../images/solutions/'+product.image+')','background-repeat':'no-repeat','background-size':'contain','background-position':'center'}">
+                    <!-- <img src="../../images/solutions/{{ product.image }}"> -->
                   </div>
+                  <div class="product-callout col-sm-8">
+                    <h2>{{ product.product }}</h2>
+                    <ul *ngIf="product.bullets.length > 0">
+                      <li *ngFor="let bullet of product.bullets">{{ bullet }}</li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+                  <div class="col-sm-12 continue-button-wrapper">
+                      <a class="btn btn-primary" href="../solutions.html"><p>View all restaurant solutions <i class="far fa-chevron-circle-right"></i></p></a>
+                    </div>
              </div>
            
 
      </div>
          </div>
         </div>
-</div>

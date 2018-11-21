@@ -14,7 +14,7 @@
              <div class="row" *ngIf="questionsService.questions.length==5">
              
               <div class="col-sm-12 buttons-wrapper" *ngFor=" let button of questionsService.questions[3].answers">
-              <button type="button" class="btn btn-primary" data-question-id="6" [ngClass]="{'selected':questionsService.question6 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}</button>
+              <button type="button" class="btn btn-primary" data-question-id="6" [ngClass]="{'selected':questionsService.question6 == button.id}" [value]="button.id" (click)="onClick($event)" >{{ button.text }}, {{ button.answer }}</button>
             </div>
           
           </div>

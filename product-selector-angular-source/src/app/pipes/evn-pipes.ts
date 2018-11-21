@@ -23,7 +23,10 @@ export class FilterProducts implements PipeTransform {
             let np: Product = new Product();
                 np.product = element.product;
                 np.tags = element.tags;
+                np.class = element.class;
                 np.sortOrder = element.sortOrder;
+                np.bullets = element.bullets;
+                np.image = element.image;
                 ret.push(np);
          }
        

@@ -31,6 +31,10 @@ export class PrequestionsComponent implements OnInit{
   qs: any = this.questionsService;
   title:any;
   ngOnInit() {
+    if(this.questionsService.preQuestions.length > 0){
+      this.questionsService.preQuestions.length = 0;
+      this.loadPrequestions();
+      }else{
       this.questionsService.questionsObservable.subscribe(res=>{
               this.jsonQuestions = res;
               if(!this.questionsService.jsonQuestions){
@@ -45,6 +49,10 @@ export class PrequestionsComponent implements OnInit{
               }
               this.loadPrequestions();
             });
+
+          }
+
+            
     }
 
     loadPrequestions(){
@@ -68,7 +76,8 @@ export class PrequestionsComponent implements OnInit{
                       'text':  element.text,
                       additional: {
                         question: questionIndex,
-                        icon: element.icon
+                        icon: element.icon,
+                        image: element.image
                       }
                       };
                       questionForSelect2.answers.push(option);
@@ -102,6 +111,8 @@ export class PrequestionsComponent implements OnInit{
                               questionForSelect2.question = question[0];
                               questionForSelect2.sortOrder = question[2];
                               questionForSelect2.excludeValues = question[3];
+                              //questionForSelect2.class = question[4];
+
                             var rows2 = <Array<any>>question[1];
                               rows2.forEach(element => {
                                 var option = {
@@ -143,6 +154,9 @@ export class PrequestionsComponent implements OnInit{
               p.product = element['product'];
               p.tags = element['tags'];
               p.sortOrder = element['sortorder'];
+              p.class = element['class'];
+              p.bullets = element['callout-bullets'];
+              p.image = element['callout-image']
                this.products.push(p);
              });
           },

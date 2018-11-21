@@ -26,5 +26,6 @@ export class Question {
   export class FullAnswer {
     questionNum: string;
     textAnswer: string;
+    text: string;
     sortorder: number;
   }

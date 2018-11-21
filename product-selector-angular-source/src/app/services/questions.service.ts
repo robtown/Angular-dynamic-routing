@@ -32,9 +32,14 @@ export class QuestionsService {
   public productsObservable : Observable<Products> = this.http.get<Products>("./assets/data/evn-product-tags.json"); // Observable to use to load all the products
   public jsonQuestions: Questions; // Raw questions as loaded straight from evn-questions.json
 
+  
+
 
   // Storage for header icon when question #2 is selected
   public headerIcon: any;
+  public headerIconText: any;
+  public headerIconImage: any;
+  public headerResultImage: any;
 
  // Arrays for storage.
   public preQuestions: Array<Select2Question> = []; // First three questions
@@ -61,6 +66,9 @@ export class QuestionsService {
 
       this.question1 = newVal;
       var answer = this.preQuestions[1].answers.filter(answr=> answr.id == newVal);
+      this.headerIconImage = event.data[0].additional["icon"] != undefined && event.data[0].additional["icon"] != "" ? event.data[0].additional["icon"] : "";
+      this.headerIconText = event.data[0].text != undefined && event.data[0].text != "" ? event.data[0].text : "";
+      this.headerResultImage = event.data[0].additional["image"] != undefined && event.data[0].additional["image"] != "" ? event.data[0].additional["image"] : "";
       this.headerIcon = "<img src='./assets/images/Icons/" + event.data[0].additional["icon"] + "'/><p>" + event.data[0].text + "</p>";
       break;
       case 2:
@@ -75,10 +83,12 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q1";
       fullAns.textAnswer = answer[0].answer;
+      fullAns.text = answer[0].text;
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
        // console.log( this.fullAnswers[idx].textAnswer);
         this.fullAnswers[idx].textAnswer = answer[0].answer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
       this.fullAnswers.push(fullAns);
       }
@@ -90,9 +100,11 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q2";
       fullAns.textAnswer = answer[0].answer;
+      fullAns.text = answer[0].text;
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
         this.fullAnswers[idx].textAnswer = answer[0].answer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
         this.fullAnswers.push(fullAns);
       }
@@ -104,10 +116,12 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q3";
       fullAns.textAnswer = answer[0].answer;
+      fullAns.text = answer[0].text;
 
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
         this.fullAnswers[idx].textAnswer = answer[0].answer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
        this.fullAnswers.push(fullAns);
       }
@@ -118,9 +132,11 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q4";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      fullAns.text = answer[0].text;
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
         this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
       this.fullAnswers.push(fullAns);
       }
@@ -132,9 +148,11 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q5";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      fullAns.text = answer[0].text;
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
         this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
       this.fullAnswers.push(fullAns);
       }
@@ -146,9 +164,11 @@ export class QuestionsService {
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q6";
       fullAns.textAnswer = answer[0].answer == undefined ? answer[0].text: answer[0].answer;
+      fullAns.text = answer[0].text;
       var idx = this.getFullAnswerExist(fullAns.questionNum);
       if(idx != -1){
         this.fullAnswers[idx].textAnswer = fullAns.textAnswer;
+        this.fullAnswers[idx].text = answer[0].text;
       }else{
       this.fullAnswers.push(fullAns);
       }
@@ -211,6 +231,16 @@ export class QuestionsService {
     this.question6 = "";
     this.question7 = "";
     this.question8 = "";
+  }
+
+  resetPreQuestions(){
+    //this.selectedProducts.length = 0;
+    //this.fullAnswers.length = 0;
+    this.question0 = "";
+    this.question1 = "";
+    this.question2 = "";
+    this.headerIcon = "";
+   
   }
 
    // Functions for select2 select boxes
