@@ -6,9 +6,9 @@
   ],
 "questions": [
   [
-    "Does your business need to access sales informaton and/or reportng for multiple locations on one system?" , [{
-      "text":"Yes","value":"MULTIREP", "answer":"my business needs to access sales informaton and/or reporting to multiple locatons on one system."},
-      {"text":"No","value":"none", "answer":"my business does not need to access sales informaton and/or reporting to multiple locatons on one system."
+    "Does your business need to access sales information and/or reporting for multiple locations on one system?" , [{
+      "text":"Yes","value":"MULTIREP", "answer":"my business needs to access sales information and/or reporting to multiple locations on one system."},
+      {"text":"No","value":"none", "answer":"my business does not need to access sales information and/or reporting to multiple locations on one system."
       
     }], 1 , {"questionExclude": []}
     ],
@@ -26,9 +26,9 @@
     }],  3 , {"questionExclude": []}
     ],
   [
-    "Do you need an online order feature or other e-commerce solution?" , [{
-      "text":"Yes", "value":"ECOMMERCE", "answer": "I need an online order feature or other e-commerce solution."},
-      {"text":"No", "value":"none", "answer": "I don't need an online order feature or other e-commerce solution."
+    "Do you need an online order feature or other eCommerce solution?" , [{
+      "text":"Yes", "value":"ECOMMERCE", "answer": "I need an online order feature or other eCommerce solution."},
+      {"text":"No", "value":"none", "answer": "I don't need an online order feature or other eCommerce solution."
       
     }],  4 , {"questionExclude": ["CANADA"]}
     ],

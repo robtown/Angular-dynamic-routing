@@ -13,7 +13,14 @@ body {
     background: #fafafa;
     position:relative;
     height: 100%;
-		overflow-y: scroll;
+        overflow-y: scroll;
+        
+        &.canada{
+
+            .canada-hide{
+                display:none;
+            }
+        }
    
     p {
         font-family: nimbus-sans, sans-serif;

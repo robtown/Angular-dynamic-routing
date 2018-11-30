@@ -142,9 +142,10 @@
         .callout-title{
             color: $blue;
             font-size: 1.1rem;
-            padding-top:4px;
+            padding-top:12px;
             font-weight: 400;
             margin-bottom: 0px;
+            line-height: 1.1rem;
         }
         .callout-text{
             color: $link-gray;
@@ -251,7 +252,10 @@
             .callout-title{
                 color: $link-blue;
             }
-
+            .callout-sub-text{
+                font-size:.8rem;
+                color: $black;
+            }
             .solutions-product-image{
                 margin: 2rem 1rem;
                 img{

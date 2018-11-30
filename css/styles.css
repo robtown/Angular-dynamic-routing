@@ -668,9 +668,10 @@ body.fixed-side-nav .sidebar-wrapper {
 .products .lower-content .callout-title, .solutions .lower-content .callout-title {
   color: #0c2074;
   font-size: 1.1rem;
-  padding-top: 4px;
+  padding-top: 12px;
   font-weight: 400;
   margin-bottom: 0px;
+  line-height: 1.1rem;
 }
 
 .products .lower-content .callout-text, .solutions .lower-content .callout-text {
@@ -788,6 +789,11 @@ body.fixed-side-nav .sidebar-wrapper {
 
 .products .lower-content.solutions .callout-title, .solutions .lower-content.solutions .callout-title {
   color: #1d7bbf;
+}
+
+.products .lower-content.solutions .callout-sub-text, .solutions .lower-content.solutions .callout-sub-text {
+  font-size: .8rem;
+  color: #000;
 }
 
 .products .lower-content.solutions .solutions-product-image, .solutions .lower-content.solutions .solutions-product-image {
@@ -1239,6 +1245,10 @@ body {
   position: relative;
   height: 100%;
   overflow-y: scroll;
+}
+
+body.canada .canada-hide {
+  display: none;
 }
 
 body p {

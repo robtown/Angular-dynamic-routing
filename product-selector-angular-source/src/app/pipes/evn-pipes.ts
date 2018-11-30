@@ -10,16 +10,22 @@ export class FilterProducts implements PipeTransform {
 
     data.forEach(element => {
         let nomatch: boolean = true;
-        let numMatches: number = 0;
+       // let match: boolean = false;
+      //  let numMatches: number = 0;
+       // let count: number = 0;
+        var test: any = tags.every(val => element.tags.includes(val)); 
+        //console.log("test: " + test);
 
-        element.tags.forEach(element => {
-            tags.forEach(tag=>{
-                if(element == tag){
-                    numMatches++;
-                }
-            })
-        });
-         if(numMatches == tags.length){
+        // element.tags.forEach(element => {
+        //     tags.forEach(tag=>{
+        //         if(element == tag){
+        //            // numMatches++;
+        //         }
+        //     })
+
+        //     count++;
+        // });
+         if(test){
             let np: Product = new Product();
                 np.product = element.product;
                 np.tags = element.tags;
