@@ -47,6 +47,8 @@ export class QuestionsService {
   public products: Array<Product> = []; // The products and associated tags for filtering
   public selectedProducts: any = []; // Array for the tags selected by the answers of questions 4+
 
+  public orientation: string = "right";
+
 
   public fullAnswers: any = [];
 

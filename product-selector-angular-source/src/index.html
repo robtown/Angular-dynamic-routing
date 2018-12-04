@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Elavon Product Selector - Restaurant</title>
-  <base href="/">
+ 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -12,12 +12,12 @@
    
   <app-root></app-root>
   <footer>
-      <div class="container">
-      <div class="row">
-      <div class="col-sm-12"><div class="footer-link"><a href="../solutions.html">View all solutions</a></div></div>
-      </div>
-      </div>
-  </footer>
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-12"><div class="back-link" style="display:none;"><a href="#" onclick="window.history.back();return false">Previous question</a></div><div class="footer-link"><a href="../solutions.html">View all solutions</a></div></div>
+    </div>
+    </div>
+</footer>
   <!-- Google Analytics -->
 <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -27,6 +27,15 @@
      
       ga('create', 'UA-5945146-1', 'auto');
       ga('send', 'pageview');
+
+      showBack = function(show){
+        if(!show){
+          $('.back-link').hide();
+        }else{
+          $('.back-link').show();
+        }
+
+    }
      
     </script>
      

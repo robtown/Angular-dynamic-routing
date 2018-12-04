@@ -213,7 +213,8 @@ box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
        }
 
        .buttons-wrapper{
-           margin-top:2rem;
+        //max-width: 500px;
+        margin: 1.2rem auto 0;
         button{
             background: transparent;
             min-width: 200px;
@@ -221,6 +222,7 @@ box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
             padding-bottom: .45rem;
             border: 1px #666 solid;
                 color: #666;
+               // width:100%;
             p{
                 font-size:1.1rem;
                 i{
@@ -245,8 +247,10 @@ box-shadow: inset 0px 10px 9px -9px rgba(0,0,0,0.75);
 footer{
     flex-shrink: 1;
     background: $blue;
+   // width:100%;
+   // position:fixed;
 
-    .footer-link{
+    .footer-link, .back-link{
         float:right;
         padding: 1rem 0;
 
@@ -257,5 +261,8 @@ footer{
                 text-decoration: none;
             }
         }
+    }
+    .back-link{
+        float: left;
     }
 }

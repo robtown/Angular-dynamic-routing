@@ -8,10 +8,12 @@
         
         </header>
         
-        <div class="bodycontent col-sm-12" [@routerTransition]="getState(o)">
+         <div class="bodycontent col-sm-12" [@routerTransition]="getState(o)">
+                        <!-- <div class="bodycontent col-sm-12" [@routerAnimation]="getRouteAnimation(o)"> -->
 
         <router-outlet #o="outlet"></router-outlet>
 </div>
+
 
 
 

@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';    
 import {Location} from "@angular/common";
 
+declare var showBack: any;
+
 @Component({
   selector: 'about',
   templateUrl: '../views/_question1.html'
@@ -15,7 +17,7 @@ export class Question1 implements OnInit{
      
       question4 = this.questionsService.question3;
     ngOnInit(){
-
+      showBack(true);
     if(this.questionsService.questions.length > 0){
     console.log(this.questionsService.selectedProducts);
     console.log(this.questionsService.questions);

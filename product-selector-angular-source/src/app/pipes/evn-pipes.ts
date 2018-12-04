@@ -6,7 +6,7 @@ import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl
 export class FilterProducts implements PipeTransform {
   transform(data: any[], tags: any[]) {  // replace the any with your interface for data.
     let ret:any = [];
-    if(tags.length == 0){ return ret; }
+    if(tags.length < 2 ){ return ret; } // If the selected products array is empty or only has the country tag in it, return empty array.
 
     data.forEach(element => {
         let nomatch: boolean = true;

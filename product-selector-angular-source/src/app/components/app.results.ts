@@ -15,6 +15,8 @@ import { FullAnswer } from '../models/question';
         selected: any;
         selectedClass: string;
         main_image: any;
+
+        showFootNotes: boolean = false;
         
       ngOnInit(){
       let self = this;

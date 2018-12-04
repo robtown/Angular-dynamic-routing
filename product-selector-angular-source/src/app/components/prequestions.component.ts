@@ -6,6 +6,7 @@ import { Product } from '../models/product';
 import * as $ from 'jquery';
 import { Observable, of } from 'rxjs';
 import { Convert, Questions, PrequestionClass } from "../models/interfaces";
+declare var showBack: any;
 
 
 @Component({
@@ -22,6 +23,9 @@ export class PrequestionsComponent implements OnInit{
   // Products array
   products: any = [];
 
+     
+  
+
   answeredQuestions:any = [];
   
   jsonQuestions: Questions;
@@ -29,8 +33,10 @@ export class PrequestionsComponent implements OnInit{
   
   constructor(private questionsService: QuestionsService) { }
   qs: any = this.questionsService;
+  pageState = this.qs.orientation;
   title:any;
   ngOnInit() {
+    showBack(this.questionsService.question0);
     if(this.questionsService.preQuestions.length > 0){
       this.questionsService.preQuestions.length = 0;
       this.loadPrequestions();

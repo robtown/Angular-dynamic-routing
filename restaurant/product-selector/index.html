@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>Elavon Product Selector - Restaurant</title>
+ 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.b039d2c710f6256f9693.css"></head>
+</head>
 <body>
    
   <app-root></app-root>
   <footer>
-      <div class="container">
-      <div class="row">
-      <div class="col-sm-12"><div class="footer-link"><a href="../solutions.html">View all solutions</a></div></div>
-      </div>
-      </div>
-  </footer>
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-12"><div class="back-link" style="display:none;"><a href="#" onclick="window.history.back();return false">Previous question</a></div><div class="footer-link"><a href="../solutions.html">View all solutions</a></div></div>
+    </div>
+    </div>
+</footer>
   <!-- Google Analytics -->
 <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,9 +27,18 @@
      
       ga('create', 'UA-5945146-1', 'auto');
       ga('send', 'pageview');
+
+      showBack = function(show){
+        if(!show){
+          $('.back-link').hide();
+        }else{
+          $('.back-link').show();
+        }
+
+    }
      
     </script>
      
     <!-- End Google Analytics --> 
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.3252f90364ffcd9d8845.js"></script><script type="text/javascript" src="scripts.7d930e6357a30445c753.js"></script><script type="text/javascript" src="main.b5859e9b052af4dc048e.js"></script></body>
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
 </html>

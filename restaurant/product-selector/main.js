@@ -23,6 +23,86 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/app-routing/animations.ts":
+/*!*******************************************!*\
+  !*** ./src/app/app-routing/animations.ts ***!
+  \*******************************************/
+/*! exports provided: routerTransition4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerTransition4", function() { return routerTransition4; });
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+
+function routerTransition4() {
+    return Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('routerAnimation', [
+        // LEFT TO RIGHT AKA RESET
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => 0', [
+            // Initial state of new route
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(-100%)'
+            }), { optional: true }),
+            // move page off screen right on leave
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(100%)',
+            })), { optional: true }),
+            // move page in screen from left to right
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                opacity: 1,
+                transform: 'translateX(0%)'
+            })), { optional: true }),
+        ]),
+        // LEFT TO RIGHT AKA PREVIOUS
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => 1', [
+            // Initial state of new route
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(-100%)'
+            }), { optional: true }),
+            // move page off screen right on leave
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(100%)',
+            })), { optional: true }),
+            // move page in screen from left to right
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                opacity: 1,
+                transform: 'translateX(0%)'
+            })), { optional: true }),
+        ]),
+        // RIGHT TO LEFT AKA NEXT
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => 2', [
+            // Initial state of new route
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(100%)'
+            }), { optional: true }),
+            // move page off screen right on leave
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                position: 'fixed',
+                width: '100%',
+                transform: 'translateX(-100%)',
+            })), { optional: true }),
+            // move page in screen from left to right
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+                opacity: 1,
+                transform: 'translateX(0%)'
+            })), { optional: true }),
+        ])
+    ]);
+}
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing/app-routing.module.ts":
 /*!***************************************************!*\
   !*** ./src/app/app-routing/app-routing.module.ts ***!
@@ -51,15 +131,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: 'product-selector', component: _components_prequestions_component__WEBPACK_IMPORTED_MODULE_2__["PrequestionsComponent"] },
+    { path: 'product-selector', component: _components_prequestions_component__WEBPACK_IMPORTED_MODULE_2__["PrequestionsComponent"], data: { state: 'Prequestions', num: 0 } },
     { path: '', redirectTo: '/product-selector', pathMatch: 'full' },
-    { path: 'Q1', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question1"], data: { state: 'Q1' } },
-    { path: 'Q2', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question2"], data: { state: 'Q2' } },
-    { path: 'Q3', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question3"], data: { state: 'Q3' } },
-    { path: 'Q4', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question4"], data: { state: 'Q4' } },
-    { path: 'Q5', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question5"], data: { state: 'Q5' } },
-    { path: 'Q6', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question6"], data: { state: 'Q6' } },
-    { path: 'Results', component: _components_app_results__WEBPACK_IMPORTED_MODULE_4__["Results"], data: { state: 'Results' } },
+    { path: 'Q1', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question1"], data: { state: 'Q1', num: 1 } },
+    { path: 'Q2', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question2"], data: { state: 'Q2', num: 2 } },
+    { path: 'Q3', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question3"], data: { state: 'Q3', num: 3 } },
+    { path: 'Q4', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question4"], data: { state: 'Q4', num: 4 } },
+    { path: 'Q5', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question5"], data: { state: 'Q5', num: 5 } },
+    { path: 'Q6', component: _components_app_question1__WEBPACK_IMPORTED_MODULE_3__["Question6"], data: { state: 'Q6', num: 6 } },
+    { path: 'Results', component: _components_app_results__WEBPACK_IMPORTED_MODULE_4__["Results"], data: { state: 'Results', num: 10000 } },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -83,12 +163,15 @@ var AppRoutingModule = /** @class */ (function () {
 /*!**************************************************!*\
   !*** ./src/app/app-routing/router.animations.ts ***!
   \**************************************************/
-/*! exports provided: routerTransition */
+/*! exports provided: routerTransition, left, routerTransition3, routerTransition2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerTransition", function() { return routerTransition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "left", function() { return left; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerTransition3", function() { return routerTransition3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerTransition2", function() { return routerTransition2; });
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 
 var routerTransition = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('routerTransition', [
@@ -104,6 +187,86 @@ var routerTransition = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('0.5s ease-in-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(-100%)' }))
             ], { optional: true }),
         ])
+    ])
+]);
+var left = [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter, :leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ position: 'fixed', width: '100%' }), { optional: true }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["group"])([
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(-100%)' }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('.3s ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(0%)' }))], {
+            optional: true,
+        }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':leave', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(0%)' }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('.3s ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(100%)' }))], {
+            optional: true,
+        }),
+    ]),
+];
+var right = [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter, :leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ position: 'fixed', width: '100%' }), { optional: true }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["group"])([
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':enter', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(100%)' }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('.3s ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(0%)' }))], {
+            optional: true,
+        }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["query"])(':leave', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(0%)' }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('.3s ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translateX(-100%)' }))], {
+            optional: true,
+        }),
+    ]),
+];
+var routerTransition3 = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('routerTransition3', [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => right', right),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => left', left),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => right1', right),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => left1', left)
+]);
+var routerTransition2 = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('routerTransition2', [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])("void => prev", // ---> Entering --->
+    [
+        // In order to maintain a zIndex of 2 throughout the ENTIRE
+        // animation (but not after the animation), we have to define it
+        // in both the initial and target styles. Unfortunately, this
+        // means that we ALSO have to define target values for the rest
+        // of the styles, which we wouldn't normally have to.
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: -100,
+            opacity: 0.0,
+            zIndex: 2
+        }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])("200ms ease-in-out", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: 0,
+            opacity: 1.0,
+            zIndex: 2
+        }))
+    ]),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])("prev => void", // ---> Leaving --->
+    [
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])("200ms ease-in-out", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: 100,
+            opacity: 0.0
+        }))
+    ]),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])("* => next", // <--- Entering <---
+    [
+        // In order to maintain a zIndex of 2 throughout the ENTIRE
+        // animation (but not after the animation), we have to define it
+        // in both the initial and target styles. Unfortunately, this
+        // means that we ALSO have to define target values for the rest
+        // of the styles, which we wouldn't normally have to.
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: 100,
+            opacity: 0.0,
+            zIndex: 2
+        }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])("200ms ease-in-out", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: 0,
+            opacity: 1.0,
+            zIndex: 2
+        }))
+    ]),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])("next => *", // <--- Leaving <---
+    [
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])("200ms ease-in-out", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({
+            left: -100,
+            opacity: 0.0
+        }))
     ])
 ]);
 
@@ -128,7 +291,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    \n         \n                <div class=\"col-sm-12 test\"><a href=\"../../index.html\" class=\"btn\">Leave product selector</a>\n                <div class=\"business-type-icon\" *ngIf=\"qs.headerIcon\" [innerHtml]=\"qs.headerIcon | safe: 'html'\"></div>\n                </div>\n            \n        \n        </header>\n        \n        <div class=\"bodycontent col-sm-12\" [@routerTransition]=\"getState(o)\">\n\n        <router-outlet #o=\"outlet\"></router-outlet>\n</div>\n\n\n\n\n\n"
+module.exports = "<header>\n    \n         \n                <div class=\"col-sm-12 test\"><a href=\"../../index.html\" class=\"btn\">Leave product selector</a>\n                <div class=\"business-type-icon\" *ngIf=\"qs.headerIcon\" [innerHtml]=\"qs.headerIcon | safe: 'html'\"></div>\n                </div>\n            \n        \n        </header>\n        \n         <div class=\"bodycontent col-sm-12\" [@routerTransition]=\"getState(o)\">\n                        <!-- <div class=\"bodycontent col-sm-12\" [@routerAnimation]=\"getRouteAnimation(o)\"> -->\n\n        <router-outlet #o=\"outlet\"></router-outlet>\n</div>\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -144,7 +307,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/questions.service */ "./src/app/services/questions.service.ts");
-/* harmony import */ var _app_routing_router_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing/router.animations */ "./src/app/app-routing/router.animations.ts");
+/* harmony import */ var _services_navigation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/navigation.service */ "./src/app/services/navigation.service.ts");
+/* harmony import */ var _app_routing_router_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing/router.animations */ "./src/app/app-routing/router.animations.ts");
+/* harmony import */ var _app_routing_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing/animations */ "./src/app/app-routing/animations.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -157,25 +322,39 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+//declare var showBack: any;
 var AppComponent = /** @class */ (function () {
-    function AppComponent(questionsService) {
+    function AppComponent(questionsService, navigationService) {
         this.questionsService = questionsService;
+        this.navigationService = navigationService;
         this.qs = this.questionsService;
+        this.pageState = this.qs.orientation;
     }
+    //showBack: any = this.navigationService.animationValue != 0;
     AppComponent.prototype.getState = function (outlet) {
+        // this.showBack = outlet.activatedRouteData.num != 0;
         return outlet.activatedRouteData.state;
     };
     AppComponent.prototype.getIcon = function () {
         console.log("get icon");
     };
+    AppComponent.prototype.getRouteAnimation = function (outlet) {
+        console.log('lastValue', this.navigationService.lastValue);
+        console.log('newValue', this.navigationService.newValue);
+        console.log('result', this.navigationService.animationValue);
+        // this.showBack = outlet.activatedRouteData.num != 0;
+        return this.navigationService.animationValue;
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
-            animations: [_app_routing_router_animations__WEBPACK_IMPORTED_MODULE_2__["routerTransition"]],
+            animations: [Object(_app_routing_animations__WEBPACK_IMPORTED_MODULE_4__["routerTransition4"])(), _app_routing_router_animations__WEBPACK_IMPORTED_MODULE_3__["routerTransition"]],
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"]])
+        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"], _services_navigation_service__WEBPACK_IMPORTED_MODULE_2__["NavigationService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -294,6 +473,7 @@ var Question1 = /** @class */ (function () {
         this.question4 = this.questionsService.question3;
     }
     Question1.prototype.ngOnInit = function () {
+        showBack(true);
         if (this.questionsService.questions.length > 0) {
             console.log(this.questionsService.selectedProducts);
             console.log(this.questionsService.questions);
@@ -536,6 +716,7 @@ var Results = /** @class */ (function () {
         this.router = router;
         this.loaded = false;
         this.results = [];
+        this.showFootNotes = false;
     }
     Results.prototype.ngOnInit = function () {
         var self = this;
@@ -624,9 +805,11 @@ var PrequestionsComponent = /** @class */ (function () {
         this.answeredQuestions = [];
         this.loaded = false;
         this.qs = this.questionsService;
+        this.pageState = this.qs.orientation;
     }
     PrequestionsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        showBack(this.questionsService.question0);
         if (this.questionsService.preQuestions.length > 0) {
             this.questionsService.preQuestions.length = 0;
             this.loadPrequestions();
@@ -877,20 +1060,25 @@ var FilterProducts = /** @class */ (function () {
     }
     FilterProducts.prototype.transform = function (data, tags) {
         var ret = [];
-        if (tags.length == 0) {
+        if (tags.length < 2) {
             return ret;
-        }
+        } // If the selected products array is empty or only has the country tag in it, return empty array.
         data.forEach(function (element) {
             var nomatch = true;
-            var numMatches = 0;
-            element.tags.forEach(function (element) {
-                tags.forEach(function (tag) {
-                    if (element == tag) {
-                        numMatches++;
-                    }
-                });
-            });
-            if (numMatches == tags.length) {
+            // let match: boolean = false;
+            //  let numMatches: number = 0;
+            // let count: number = 0;
+            var test = tags.every(function (val) { return element.tags.includes(val); });
+            //console.log("test: " + test);
+            // element.tags.forEach(element => {
+            //     tags.forEach(tag=>{
+            //         if(element == tag){
+            //            // numMatches++;
+            //         }
+            //     })
+            //     count++;
+            // });
+            if (test) {
                 var np = new _models_product__WEBPACK_IMPORTED_MODULE_1__["Product"]();
                 np.product = element.product;
                 np.tags = element.tags;
@@ -938,6 +1126,77 @@ var SafePipe = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/navigation.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/navigation.service.ts ***!
+  \************************************************/
+/*! exports provided: NavigationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationService", function() { return NavigationService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NavigationService = /** @class */ (function () {
+    function NavigationService(router) {
+        var _this = this;
+        this.router = router;
+        this.router
+            .events
+            .subscribe(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivationEnd"]) {
+                var snapshot = event.snapshot;
+                if (snapshot.data.num) {
+                    _this.lastValue = _this.newValue;
+                    _this.newValue = snapshot.data.num;
+                    _this.animationValue = _this.getAnimationNumber(_this.lastValue, _this.newValue);
+                }
+            }
+        });
+    }
+    NavigationService.prototype.getAnimationNumber = function (lastValue, newValue) {
+        var result = 0;
+        if (lastValue && newValue) {
+            result = 2;
+            if (lastValue) {
+                if (newValue > lastValue) {
+                    result = 2;
+                }
+                else {
+                    result = 1;
+                }
+            }
+            else {
+                result = 1;
+            }
+        }
+        return result;
+    };
+    NavigationService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], NavigationService);
+    return NavigationService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/questions.service.ts":
 /*!***********************************************!*\
   !*** ./src/app/services/questions.service.ts ***!
@@ -976,6 +1235,7 @@ var QuestionsService = /** @class */ (function () {
         this.questions = []; // The rest of the questions
         this.products = []; // The products and associated tags for filtering
         this.selectedProducts = []; // Array for the tags selected by the answers of questions 4+
+        this.orientation = "right";
         this.fullAnswers = [];
         // Functions for select2 select boxes
         // function for result template
@@ -1198,7 +1458,7 @@ var QuestionsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<div class=\"questions-body col-sm-12\">\n       \n      <h1>Welcome</h1>\n      <p>Answer a few questions to identify the best solution for your customer's business.</p>\n      <div class=\"prequestions-line\">\n        <div class=\"col-sm-4\"><div class=\"circles question1\" [ngClass]=\"{'answered':qs.question0}\"><fa *ngIf=\"qs.question0\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question2\" [ngClass]=\"{'answered':qs.question1}\"><fa *ngIf=\"qs.question1\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question3\" [ngClass]=\"{'answered':qs.question2}\"><fa *ngIf=\"qs.question2\" name=\"check-circle\"></fa></div></div>\n      </div>\n    \n\n      <div *ngIf=\"loaded\" class=\"row questions2\">\n         <div *ngFor=\"let prequestion of prequestions; let i = index;\" class=\"col-sm-12 col-md-4\">\n           <div class=\"label-wrapper\"> <label>{{prequestion.question}}:</label></div>\n            <select2 [data]=\"prequestion.answers\" [width]=\"240\" [cssImport]=true (valueChanged)=\"onChange($event)\" [options]=\"qs.jsonQuestions.options\" [value]=\"answeredQuestions[i]\"></select2>\n          </div>\n         </div>\n    \n     \n      <div class=\"col-sm-12 continue-button-wrapper\">\n        <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/Q1']\" [disabled]=\"(!qs.question0 || !qs.question1 || !qs.question2)\"><p>Next <i class=\"far fa-chevron-circle-right\"></i></p></button>\n      </div>\n      \n      </div>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<div class=\"questions-body col-sm-12\">\n       \n      <h1>Welcome</h1>\n      <p>Answer a few questions to identify the best solution for your customer's business.</p>\n      <div class=\"prequestions-line\">\n        <div class=\"col-sm-4\"><div class=\"circles question1\" [ngClass]=\"{'answered':qs.question0}\"><fa *ngIf=\"qs.question0\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question2\" [ngClass]=\"{'answered':qs.question1}\"><fa *ngIf=\"qs.question1\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question3\" [ngClass]=\"{'answered':qs.question2}\"><fa *ngIf=\"qs.question2\" name=\"check-circle\"></fa></div></div>\n      </div>\n    \n\n      <div *ngIf=\"loaded\" class=\"row questions2\">\n         <div *ngFor=\"let prequestion of prequestions; let i = index;\" class=\"col-sm-12 col-md-4\">\n           <div class=\"label-wrapper\"> <label>{{prequestion.question}}:</label></div>\n            <select2 [data]=\"prequestion.answers\" [width]=\"240\" [cssImport]=true (valueChanged)=\"onChange($event)\" [options]=\"qs.jsonQuestions.options\" [value]=\"answeredQuestions[i]\"></select2>\n          </div>\n         </div>\n    \n     \n      <div class=\"col-sm-12 continue-button-wrapper\">\n        <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/Q1']\" [disabled]=\"(!qs.question0 || !qs.question1 || !qs.question2)\"><p>Next <i class=\"far fa-chevron-circle-right\"></i></p></button>\n      </div>\n      \n      </div>\n      <script>\n      showBack = function(hide){\n        if(hide){\n          $('.back-link').hide();\n        }else{\n          $('.back-link').show();\n        };\n      }\n        </script>"
 
 /***/ }),
 
@@ -1275,7 +1535,7 @@ module.exports = "<div class=\"questions-body col-sm-12\">\n       \n        <di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div  *ngIf=\"loaded\" class=\"main-results-image {{ selectedClass }}\" [ngStyle]=\"{'background-image':'url(../../../restaurant/results/'+main_image+')','background-repeat':'no-repeat','background-size':'cover','background-position':'center'}\">\n    <h2>{{ selected }}</h2>\n</div>\n<div class=\"results-body col-sm-12\">\n       \n        <div *ngIf=\"loaded\">\n         \n\n         \n            <div class=\"results-title\"><p>Your Results</p></div>\n            <div class=\"row results-wrapper\">\n                <div *ngIf=\"results\" class=\"row d-flex answer-row\">\n                  <div *ngFor=\"let answer of results\" class=\"answer\">\n                    <p class=\"answer-num\">{{ answer.questionNum }}</p><p class=\"answer-answer\"><span class=\"bold-blue\">{{ answer.text }}</span>, {{ answer.textAnswer }}</p>\n                    </div>\n              </div>\n              <div class=\"col-sm-12 continue-button-wrapper\">\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"startOver($event)\"><p>Start Over <i class=\"far fa-chevron-circle-right\"></i></p></button>\n              </div>\n        \n              <div class=\"col-sm-12 results-title\"><p>Recommended Solution(s)</p></div>\n              <div *ngIf=\"products\" class=\"col-sm-12 product-rows row\">\n                <div *ngFor=\"let product of products | filterProducts: questionsService.selectedProducts\" class=\"product row\">\n                  <div class=\"product-image col-sm-4 {{ product.class }}\" [ngStyle]=\"{'background-image':'url(../../../images/solutions/'+product.image+')','background-repeat':'no-repeat','background-size':'contain','background-position':'center'}\">\n                    <!-- <img src=\"../../images/solutions/{{ product.image }}\"> -->\n                  </div>\n                  <div class=\"product-callout col-sm-8\">\n                    <h2>{{ product.product }}</h2>\n                    <ul *ngIf=\"product.bullets.length > 0\">\n                      <li *ngFor=\"let bullet of product.bullets\">{{ bullet }}</li>\n                    </ul>\n                  </div>\n                  \n                  </div>\n                  <div class=\"col-sm-12 continue-button-wrapper\">\n                      <a class=\"btn btn-primary\" href=\"../solutions.html\"><p>View all restaurant solutions <i class=\"far fa-chevron-circle-right\"></i></p></a>\n                    </div>\n             </div>\n           \n\n     </div>\n         </div>\n        </div>\n"
+module.exports = "<div  *ngIf=\"loaded\" class=\"main-results-image {{ selectedClass }}\" [ngStyle]=\"{'background-image':'url(../../../restaurant/results/'+main_image+')','background-repeat':'no-repeat','background-size':'cover','background-position':'center'}\">\n    <h2>{{ selected }}</h2>\n</div>\n<div class=\"results-body col-sm-12\">\n       \n        <div *ngIf=\"loaded\">\n         \n\n         \n            <div class=\"results-title\"><p>Your Results</p></div>\n            <div class=\"row results-wrapper\">\n                <div *ngIf=\"results\" class=\"row d-flex answer-row\">\n                  <div *ngFor=\"let answer of results\" class=\"answer\">\n                    <p class=\"answer-num\">{{ answer.questionNum }}</p><p class=\"answer-answer\"><span class=\"bold-blue\">{{ answer.text }}</span>, {{ answer.textAnswer }}</p>\n                    </div>\n              </div>\n              <div class=\"col-sm-12 continue-button-wrapper\">\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"startOver($event)\"><p>Start Over <i class=\"far fa-chevron-circle-right\"></i></p></button>\n              </div>\n        \n              \n              <div *ngIf=\"(products | filterProducts: questionsService.selectedProducts).length !== 0\" class=\"col-sm-12 product-rows row\">\n                  <div class=\"col-sm-12 results-title\"><p>Recommended Solution(s)</p></div>\n                <div *ngFor=\"let product of products | filterProducts: questionsService.selectedProducts\" class=\"product row\">\n                  <div class=\"product-image col-sm-4 {{ product.class }}\" [ngStyle]=\"{'background-image':'url(assets/images/results/'+product.image+')','background-repeat':'no-repeat','background-size':'contain','background-position':'center'}\">\n                    <!-- <img src=\"../../images/solutions/{{ product.image }}\"> -->\n                  </div>\n                  <div class=\"product-callout col-sm-8\">\n                    <h2>{{ product.product }}</h2>\n                    <ul *ngIf=\"product.bullets.length > 0\">\n                      <li *ngFor=\"let bullet of product.bullets\" [innerHtml]=\" bullet | safe: 'html' \"></li>\n                    </ul>\n                  </div>\n                  \n                  </div>\n                  <div class=\"col-sm-12 solutions-footnotes\">\n                      <ol>\n                          <li>Fast Track Funding is recommended for funding of your account within 24 hours of your batch submission.  Submit your batch each day before 6 am ET with transactions totaling up to $25,000 and receive your funds by 5 pm local time the same day.</li>\n                          <li>Safe-T is recommended for security features such as Encryption, Tokenization, and PCI breach assistance.</li>\n                      </ol>\n                  </div>\n                  <div class=\"col-sm-12 continue-button-wrapper\">\n                      <a class=\"btn btn-primary\" href=\"../solutions.html\"><p>View all restaurant solutions <i class=\"far fa-chevron-circle-right\"></i></p></a>\n                    </div>\n             </div>\n             <div *ngIf=\"(products | filterProducts: questionsService.selectedProducts).length === 0\" class=\"col-sm-12 product-rows row\">\n                <div class=\"col-sm-12 results-title\"><p>Recommended Solution(s)</p></div>\n                <div class=\"col-sm-12 no-results\"><p>No results were found</p></div>\n                </div>\n           \n\n     </div>\n         </div>\n        </div>\n       \n"
 
 /***/ }),
 

@@ -18,26 +18,38 @@
                 <button type="button" class="btn btn-primary" (click)="startOver($event)"><p>Start Over <i class="far fa-chevron-circle-right"></i></p></button>
               </div>
         
-              <div class="col-sm-12 results-title"><p>Recommended Solution(s)</p></div>
-              <div *ngIf="products" class="col-sm-12 product-rows row">
+              
+              <div *ngIf="(products | filterProducts: questionsService.selectedProducts).length !== 0" class="col-sm-12 product-rows row">
+                  <div class="col-sm-12 results-title"><p>Recommended Solution(s)</p></div>
                 <div *ngFor="let product of products | filterProducts: questionsService.selectedProducts" class="product row">
-                  <div class="product-image col-sm-4 {{ product.class }}" [ngStyle]="{'background-image':'url(../../../images/solutions/'+product.image+')','background-repeat':'no-repeat','background-size':'contain','background-position':'center'}">
+                  <div class="product-image col-sm-4 {{ product.class }}" [ngStyle]="{'background-image':'url(assets/images/results/'+product.image+')','background-repeat':'no-repeat','background-size':'contain','background-position':'center'}">
                     <!-- <img src="../../images/solutions/{{ product.image }}"> -->
                   </div>
                   <div class="product-callout col-sm-8">
                     <h2>{{ product.product }}</h2>
                     <ul *ngIf="product.bullets.length > 0">
-                      <li *ngFor="let bullet of product.bullets">{{ bullet }}</li>
+                      <li *ngFor="let bullet of product.bullets" [innerHtml]=" bullet | safe: 'html' "></li>
                     </ul>
                   </div>
                   
+                  </div>
+                  <div class="col-sm-12 solutions-footnotes">
+                      <ol>
+                          <li>Fast Track Funding is recommended for funding of your account within 24 hours of your batch submission.  Submit your batch each day before 6 am ET with transactions totaling up to $25,000 and receive your funds by 5 pm local time the same day.</li>
+                          <li>Safe-T is recommended for security features such as Encryption, Tokenization, and PCI breach assistance.</li>
+                      </ol>
                   </div>
                   <div class="col-sm-12 continue-button-wrapper">
                       <a class="btn btn-primary" href="../solutions.html"><p>View all restaurant solutions <i class="far fa-chevron-circle-right"></i></p></a>
                     </div>
              </div>
+             <div *ngIf="(products | filterProducts: questionsService.selectedProducts).length === 0" class="col-sm-12 product-rows row">
+                <div class="col-sm-12 results-title"><p>Recommended Solution(s)</p></div>
+                <div class="col-sm-12 no-results"><p>No results were found</p></div>
+                </div>
            
 
      </div>
          </div>
         </div>
+       
