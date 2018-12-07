@@ -60,7 +60,7 @@
             "Payments insider recommended",
             "Features Fast Track Funding<sup>1</sup>",
             "Safe-T available<sup>2</sup>"],
-        "callout-image": "Poynt.png"},
+        "callout-image": "P5_1.png"},
     {"product":"Poynt 5", "tags": ["US", "CANADA", "MULTIREP", "MOBILITY", "INTERNATIONAL", "MENUMGT", "MULTICAP", "GCARD", "LOYALTY", "GCARDLOYALTY"], "sortorder": 8, "class": "poynt5",
         "callout-bullets": [
             "Runs Poynt or talech POS system", 
@@ -80,7 +80,7 @@
             "Payments insider recommended",
             "Features Fast Track Funding<sup>1</sup>",
             "Safe-T available<sup>2</sup>"],
-        "callout-image": "talech-on-Moby-M70.png"},
+        "callout-image": "talech-on-Moby-or-Poynt.png"},
     {"product":"talech premium on Moby M70 or Poynt", "tags": ["US", "MULTIREP", "MOBILITY", "INTERNATIONAL", "ECOMMERCE", "MULTICAP", "GCARD", "LOYALTY", "GCARDLOYALTY"], "sortorder": 9, "class": "talech-premium-m70-poynt",
         "callout-bullets": [
             "Debit and credit cards, contactless payments (including Apple Pay)", 
@@ -91,13 +91,14 @@
             "Payments insider recommended",
             "Features Fast Track Funding<sup>1</sup>",
             "Safe-T available<sup>2</sup>"],
-        "callout-image": "talech-on-Moby-M70.png"},
+        "callout-image": "talech-on-Moby-or-Poynt.png"},
     {"product":"NCR Silver", "tags": ["US", "MENUMGT"], "sortorder": 10, "class": "ncr-silver",
         "callout-bullets": [
             "$200K to $500K processing volume/site/year", 
             "More than 500 sites", 
             "Up to 50K SKUs",
             "Counter and drive-thru POS",
+            "Best for restaurants with limited counter space and a need for strong operations and back-end features at an affordable price",
             "Payments insider recommended",
             "Features Fast Track Funding<sup>1</sup>"],
         "callout-image": "NCR-Silver.png"},

@@ -158,7 +158,7 @@ body{
                         color: $link-gray;
                         padding: 1rem 0;
                     
-                        display: flex;
+                        //display: flex;
                         width:100%;
                         .bullet{
                             i{ width:6px; float:left; padding-top: 4px; color: $link-gray;}
@@ -171,7 +171,7 @@ body{
                             color: $link-gray;
                             float: left;
                             padding-bottom: 0;
-                            margin: 0 .5rem;
+                            margin: 0 .5rem 10px;
                             width:91%;
                             font-size: 1rem;
                             line-height:1.2rem;
