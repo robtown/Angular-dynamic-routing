@@ -11,13 +11,14 @@ import { FilterProducts, SafePipe } from './pipes/evn-pipes';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PrequestionsComponent } from './components/prequestions.component';
-import { Question1, Question2, Question3, Question4, Question5, Question6 } from './components/app.question1';
+import { QuestionComponent, Question1, Question2, Question3, Question4, Question5, Question6 } from './components/app.question1';
 import { Results } from './components/app.results';
 
 @NgModule({
   declarations: [
-    AppComponent, FilterProducts, PrequestionsComponent, Question1, Question2, Question3, Question4, Question5, Question6, Results, SafePipe
+    AppComponent, FilterProducts, PrequestionsComponent, QuestionComponent, Question1, Question2, Question3, Question4, Question5, Question6, Results, SafePipe
   ],
+  entryComponents: [QuestionComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

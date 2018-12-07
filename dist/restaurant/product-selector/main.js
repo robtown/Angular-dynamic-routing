@@ -310,6 +310,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_navigation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/navigation.service */ "./src/app/services/navigation.service.ts");
 /* harmony import */ var _app_routing_router_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing/router.animations */ "./src/app/app-routing/router.animations.ts");
 /* harmony import */ var _app_routing_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing/animations */ "./src/app/app-routing/animations.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -324,15 +325,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 //declare var showBack: any;
 var AppComponent = /** @class */ (function () {
-    function AppComponent(questionsService, navigationService) {
+    function AppComponent(questionsService, navigationService, router) {
         this.questionsService = questionsService;
         this.navigationService = navigationService;
+        this.router = router;
+        this.links = [];
         this.qs = this.questionsService;
         this.pageState = this.qs.orientation;
     }
     //showBack: any = this.navigationService.animationValue != 0;
+    AppComponent.prototype.ngOnInit = function () {
+        // this.router.config.unshift(
+        //   { path: 'foo', component: Question1, data: { state: 'Q1', num: 1 } },
+        //   { path: 'bar', component: Question2, data: { state: 'Q2', num: 1 } }
+        // );
+    };
     AppComponent.prototype.getState = function (outlet) {
         // this.showBack = outlet.activatedRouteData.num != 0;
         return outlet.activatedRouteData.state;
@@ -354,7 +364,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"], _services_navigation_service__WEBPACK_IMPORTED_MODULE_2__["NavigationService"]])
+        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"], _services_navigation_service__WEBPACK_IMPORTED_MODULE_2__["NavigationService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -411,8 +421,9 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _pipes_evn_pipes__WEBPACK_IMPORTED_MODULE_6__["FilterProducts"], _components_prequestions_component__WEBPACK_IMPORTED_MODULE_9__["PrequestionsComponent"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question1"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question2"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question3"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question4"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question5"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question6"], _components_app_results__WEBPACK_IMPORTED_MODULE_11__["Results"], _pipes_evn_pipes__WEBPACK_IMPORTED_MODULE_6__["SafePipe"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _pipes_evn_pipes__WEBPACK_IMPORTED_MODULE_6__["FilterProducts"], _components_prequestions_component__WEBPACK_IMPORTED_MODULE_9__["PrequestionsComponent"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["QuestionComponent"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question1"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question2"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question3"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question4"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question5"], _components_app_question1__WEBPACK_IMPORTED_MODULE_10__["Question6"], _components_app_results__WEBPACK_IMPORTED_MODULE_11__["Results"], _pipes_evn_pipes__WEBPACK_IMPORTED_MODULE_6__["SafePipe"]
             ],
+            entryComponents: [_components_app_question1__WEBPACK_IMPORTED_MODULE_10__["QuestionComponent"]],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
@@ -436,11 +447,12 @@ var AppModule = /** @class */ (function () {
 /*!*********************************************!*\
   !*** ./src/app/components/app.question1.ts ***!
   \*********************************************/
-/*! exports provided: Question1, Question2, Question3, Question4, Question5, Question6 */
+/*! exports provided: QuestionComponent, Question1, Question2, Question3, Question4, Question5, Question6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionComponent", function() { return QuestionComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Question1", function() { return Question1; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Question2", function() { return Question2; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Question3", function() { return Question3; });
@@ -463,6 +475,48 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+var QuestionComponent = /** @class */ (function () {
+    function QuestionComponent(questionsService, router, location) {
+        this.questionsService = questionsService;
+        this.router = router;
+        this.location = location;
+        this.loaded = false;
+        this.currentQuestionNumber = this.questionsService.currQuestion;
+        this.question = this.questionsService.questions[this.currentQuestionNumber];
+    }
+    QuestionComponent.prototype.ngOnInit = function () {
+        showBack(true);
+        if (this.questionsService.questions.length > 0) {
+            console.log(this.questionsService.selectedProducts);
+            console.log(this.questionsService.questions);
+            this.loaded = true;
+        }
+        else {
+            this.router.navigateByUrl('/');
+        }
+    };
+    QuestionComponent.prototype.onClick = function (event) {
+        console.log(event.currentTarget.value);
+        this.questionsService.question3 = event.currentTarget.value;
+        this.questionsService.updateQuestions(event);
+    };
+    QuestionComponent.prototype.onChange = function (event) {
+        this.questionsService.updateQuestions(event);
+    };
+    QuestionComponent.prototype.goToNext = function () {
+        this.questionsService.currQuestion++;
+        this.router.navigateByUrl('/' + 'foo' + (this.questionsService.currQuestion + 1));
+    };
+    QuestionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'about',
+            template: __webpack_require__(/*! ../views/_question.html */ "./src/app/views/_question.html")
+        }),
+        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]])
+    ], QuestionComponent);
+    return QuestionComponent;
+}());
 
 var Question1 = /** @class */ (function () {
     function Question1(questionsService, router, location) {
@@ -777,9 +831,11 @@ var Results = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrequestionsComponent", function() { return PrequestionsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/questions.service */ "./src/app/services/questions.service.ts");
-/* harmony import */ var _models_question__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/question */ "./src/app/models/question.ts");
-/* harmony import */ var _models_product__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/product */ "./src/app/models/product.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_questions_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/questions.service */ "./src/app/services/questions.service.ts");
+/* harmony import */ var _models_question__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/question */ "./src/app/models/question.ts");
+/* harmony import */ var _models_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/product */ "./src/app/models/product.ts");
+/* harmony import */ var _components_app_question1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/app.question1 */ "./src/app/components/app.question1.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -793,9 +849,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var PrequestionsComponent = /** @class */ (function () {
-    function PrequestionsComponent(questionsService) {
+    function PrequestionsComponent(questionsService, router) {
         this.questionsService = questionsService;
+        this.router = router;
         // Questions 1-3
         this.prequestions = [];
         // Questions 4-9
@@ -839,7 +898,7 @@ var PrequestionsComponent = /** @class */ (function () {
         if (this.questionsService.preQuestions.length == 0) {
             var questionIndex = 0;
             this.questionsService.jsonQuestions.prequestions.forEach(function (prequestion) {
-                var questionForSelect2 = new _models_question__WEBPACK_IMPORTED_MODULE_2__["Select2Question"]();
+                var questionForSelect2 = new _models_question__WEBPACK_IMPORTED_MODULE_3__["Select2Question"]();
                 questionForSelect2.question = prequestion[0];
                 questionForSelect2.sortOrder = prequestion[2];
                 var rows2 = prequestion[1];
@@ -877,8 +936,9 @@ var PrequestionsComponent = /** @class */ (function () {
         this.questionsService.questions.length = 0;
         //if(this.questionsService.questions.length == 0){
         var questionIndex = 3;
+        var rowcount = 1;
         this.questionsService.jsonQuestions.questions.forEach(function (question) {
-            var questionForSelect2 = new _models_question__WEBPACK_IMPORTED_MODULE_2__["Select2Question"]();
+            var questionForSelect2 = new _models_question__WEBPACK_IMPORTED_MODULE_3__["Select2Question"]();
             questionForSelect2.question = question[0];
             questionForSelect2.sortOrder = question[2];
             questionForSelect2.excludeValues = question[3];
@@ -898,12 +958,16 @@ var PrequestionsComponent = /** @class */ (function () {
             });
             if (questionForSelect2.excludeValues.questionExclude.indexOf(_this.questionsService.question0) == -1) {
                 _this.questionsService.questions.push(questionForSelect2);
+                _this.router.config.unshift({ path: 'foo' + rowcount, component: _components_app_question1__WEBPACK_IMPORTED_MODULE_5__["QuestionComponent"], data: { state: 'Q' + rowcount, num: rowcount } });
+                console.log(rowcount);
+                rowcount++;
                 _this.answeredQuestions.push("");
             }
             questionIndex++;
         });
         // }
         this.questions = this.questionsService.questions;
+        this.questionsService.currQuestion = 0; // 0 = First question (not prequestion)
     };
     PrequestionsComponent.prototype.getProducts = function () {
         var _this = this;
@@ -911,7 +975,7 @@ var PrequestionsComponent = /** @class */ (function () {
             this.questionsService.productsObservable.subscribe(function (data) {
                 data.products.forEach(function (element) {
                     //var productKeys = Object.keys(element[1]);
-                    var p = new _models_product__WEBPACK_IMPORTED_MODULE_3__["Product"]();
+                    var p = new _models_product__WEBPACK_IMPORTED_MODULE_4__["Product"]();
                     p.product = element['product'];
                     p.tags = element['tags'];
                     p.sortOrder = element['sortorder'];
@@ -946,7 +1010,7 @@ var PrequestionsComponent = /** @class */ (function () {
             selector: 'prequestions',
             template: __webpack_require__(/*! ../views/_prequestions.html */ "./src/app/views/_prequestions.html"),
         }),
-        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_1__["QuestionsService"]])
+        __metadata("design:paramtypes", [_services_questions_service__WEBPACK_IMPORTED_MODULE_2__["QuestionsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], PrequestionsComponent);
     return PrequestionsComponent;
 }());
@@ -1230,6 +1294,8 @@ var QuestionsService = /** @class */ (function () {
         this.http = http;
         this.questionsObservable = this.http.get("./assets/data/evn-questions.json"); // Observable to use to load all the questions
         this.productsObservable = this.http.get("./assets/data/evn-product-tags.json"); // Observable to use to load all the products
+        this.currQuestion = -1;
+        this.questionAnswers = [];
         // Arrays for storage.
         this.preQuestions = []; // First three questions
         this.questions = []; // The rest of the questions
@@ -1266,6 +1332,7 @@ var QuestionsService = /** @class */ (function () {
         var newVal = event.value == undefined ? event.currentTarget.value : event.value;
         // console.log(newVal);
         var thisId = event.data == undefined ? Number(event.currentTarget.dataset.questionId) : event.data[0].additional["question"];
+        this.questionAnswers[this.currQuestion] = newVal;
         switch (thisId) {
             case 0:
                 this.question0 = newVal;
@@ -1459,6 +1526,17 @@ var QuestionsService = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<div class=\"questions-body col-sm-12\">\n       \n      <h1>Welcome</h1>\n      <p>Answer a few questions to identify the best solution for your customer's business.</p>\n      <div class=\"prequestions-line\">\n        <div class=\"col-sm-4\"><div class=\"circles question1\" [ngClass]=\"{'answered':qs.question0}\"><fa *ngIf=\"qs.question0\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question2\" [ngClass]=\"{'answered':qs.question1}\"><fa *ngIf=\"qs.question1\" name=\"check-circle\"></fa></div></div>\n        <div class=\"col-sm-4\"><div class=\"circles question3\" [ngClass]=\"{'answered':qs.question2}\"><fa *ngIf=\"qs.question2\" name=\"check-circle\"></fa></div></div>\n      </div>\n    \n\n      <div *ngIf=\"loaded\" class=\"row questions2\">\n         <div *ngFor=\"let prequestion of prequestions; let i = index;\" class=\"col-sm-12 col-md-4\">\n           <div class=\"label-wrapper\"> <label>{{prequestion.question}}:</label></div>\n            <select2 [data]=\"prequestion.answers\" [width]=\"240\" [cssImport]=true (valueChanged)=\"onChange($event)\" [options]=\"qs.jsonQuestions.options\" [value]=\"answeredQuestions[i]\"></select2>\n          </div>\n         </div>\n    \n     \n      <div class=\"col-sm-12 continue-button-wrapper\">\n        <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/Q1']\" [disabled]=\"(!qs.question0 || !qs.question1 || !qs.question2)\"><p>Next <i class=\"far fa-chevron-circle-right\"></i></p></button>\n      </div>\n      \n      </div>\n      <script>\n      showBack = function(hide){\n        if(hide){\n          $('.back-link').hide();\n        }else{\n          $('.back-link').show();\n        };\n      }\n        </script>"
+
+/***/ }),
+
+/***/ "./src/app/views/_question.html":
+/*!**************************************!*\
+  !*** ./src/app/views/_question.html ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"questions-body col-sm-12\">\n       \n        <div *ngIf=\"loaded\" class=\"questions-wrapper\">\n            <div class=\"questions-counter\">Question {{ currentQuestionNumber + 1 }} of {{ questionsService.questions.length }}</div>\n         <p>{{ questionsService.questions[currentQuestionNumber].question }}</p>\n            <div class=\"row buttons-wrapper\">\n             <div class=\"col-sm-2\"></div>\n               <!-- <select2 [data]=\"questionsService.questions[0].answers\" [width]=\"240\" [cssImport]=true (valueChanged)=\"onChange($event)\" [options]=\"options\" [value]=\"question4\"><option></option></select2> -->\n            <div class=\"col-sm-4\"  *ngFor=\" let button of questionsService.questions[0].answers\">\n               <button type=\"button\" class=\"btn btn-primary\" [ngClass]=\"{'selected':questionsService.questions[currentQuestionNumber] == button.id}\" [value]=\"button.id\" (click)=\"onClick($event)\" >{{ button.text }}</button>\n             </div>\n             <div class=\"col-sm-2\"></div>\n             </div>\n     \n         <div class=\"col-sm-12 continue-button-wrapper\">\n           <button type=\"button\" class=\"btn btn-primary\" (click)=\"goToNext($event)\" [attr.data-question-id]=\"currentQuestionNumber\" [disabled]=\"(!questionsService.questions[currentQuestionNumber])\"><p>Next <i class=\"far fa-chevron-circle-right\"></i></p></button>\n         </div>\n     </div>\n         </div>"
 
 /***/ }),
 

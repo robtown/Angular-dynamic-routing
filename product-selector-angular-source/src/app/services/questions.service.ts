@@ -32,7 +32,8 @@ export class QuestionsService {
   public productsObservable : Observable<Products> = this.http.get<Products>("./assets/data/evn-product-tags.json"); // Observable to use to load all the products
   public jsonQuestions: Questions; // Raw questions as loaded straight from evn-questions.json
 
-  
+  public currQuestion: number = -1;
+  public questionAnswers: any = [];
 
 
   // Storage for header icon when question #2 is selected
@@ -54,9 +55,13 @@ export class QuestionsService {
 
   // Functions for manipulating the answers
   public updateQuestions(event:any){
+    
     const newVal = event.value == undefined ? event.currentTarget.value : event.value;
        // console.log(newVal);
         let thisId = event.data == undefined ? Number(event.currentTarget.dataset.questionId) : event.data[0].additional["question"];
+
+        this.questionAnswers[this.currQuestion] = newVal;
+        
     switch(thisId){
       case 0:
         
@@ -78,9 +83,11 @@ export class QuestionsService {
       var answer = this.preQuestions[2].answers.filter(answr=> answr.id == newVal);
       this.question2 = newVal;
       break;
+
       case 3:
 
       this.question3 = newVal;
+     
       var answer = this.questions[0].answers.filter(answr=> answr.id == newVal);
       var fullAns: FullAnswer = new FullAnswer();
       fullAns.questionNum = "Q1";

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Select2OptionData, Select2TemplateFunction } from 'ng2-select2';
 import { QuestionsService } from '../services/questions.service';
 import { Question, SelectValue, Select2Question } from '../models/question';
@@ -6,6 +7,8 @@ import { Product } from '../models/product';
 import * as $ from 'jquery';
 import { Observable, of } from 'rxjs';
 import { Convert, Questions, PrequestionClass } from "../models/interfaces";
+
+import { QuestionComponent } from '../components/app.question1';
 declare var showBack: any;
 
 
@@ -31,7 +34,7 @@ export class PrequestionsComponent implements OnInit{
   jsonQuestions: Questions;
   loaded: boolean = false;
   
-  constructor(private questionsService: QuestionsService) { }
+  constructor(private questionsService: QuestionsService, private router: Router) { }
   qs: any = this.questionsService;
   pageState = this.qs.orientation;
   title:any;
@@ -110,7 +113,8 @@ export class PrequestionsComponent implements OnInit{
            
       this.questionsService.questions.length = 0;
                   //if(this.questionsService.questions.length == 0){
-                    var questionIndex:any  = 3
+                    var questionIndex:any  = 3;
+                    var rowcount: number = 1;
                     this.questionsService.jsonQuestions.questions.forEach(question => {
                               let questionForSelect2 : Select2Question = new Select2Question();
       
@@ -120,6 +124,7 @@ export class PrequestionsComponent implements OnInit{
                               //questionForSelect2.class = question[4];
 
                             var rows2 = <Array<any>>question[1];
+                            
                               rows2.forEach(element => {
                                 var option = {
                                   'id': element.value,
@@ -134,6 +139,11 @@ export class PrequestionsComponent implements OnInit{
                                 });
                                 if(questionForSelect2.excludeValues.questionExclude.indexOf(this.questionsService.question0) == -1){
                                 this.questionsService.questions.push(questionForSelect2);
+                                this.router.config.unshift(
+                                  { path: 'foo' + rowcount, component: QuestionComponent, data: { state: 'Q' + rowcount, num: rowcount } }
+                                );
+                                console.log(rowcount);
+                                rowcount++;
                                 this.answeredQuestions.push("");
                                 }
                                 questionIndex ++;
@@ -143,6 +153,7 @@ export class PrequestionsComponent implements OnInit{
 
                   
                   this.questions = this.questionsService.questions;
+                  this.questionsService.currQuestion = 0;  // 0 = First question (not prequestion)
                   
                  
 

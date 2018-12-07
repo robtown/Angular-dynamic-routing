@@ -8,6 +8,44 @@ declare var showBack: any;
 
 @Component({
   selector: 'about',
+  templateUrl: '../views/_question.html'
+})
+export class QuestionComponent implements OnInit{
+  
+  constructor(private questionsService: QuestionsService, private router: Router, private location: Location) { }
+      loaded: boolean = false;
+      currentQuestionNumber: number = this.questionsService.currQuestion;
+     
+      question = this.questionsService.questions[this.currentQuestionNumber];
+    ngOnInit(){
+      showBack(true);
+    if(this.questionsService.questions.length > 0){
+         console.log(this.questionsService.selectedProducts);
+         console.log(this.questionsService.questions);
+      this.loaded = true;
+    } else{
+      this.router.navigateByUrl('/');
+    }
+
+  }
+  public onClick(event): void {
+    console.log(event.currentTarget.value);
+    this.questionsService.question3 = event.currentTarget.value;
+    this.questionsService.updateQuestions(event);
+  }
+ public onChange(event): void { 
+   this.questionsService.updateQuestions(event);
+  }  
+
+  goToNext(){
+    this.questionsService.currQuestion++;
+    this.router.navigateByUrl('/' + 'foo' + (this.questionsService.currQuestion + 1))
+  }
+
+}
+
+@Component({
+  selector: 'about',
   templateUrl: '../views/_question1.html'
 })
 export class Question1 implements OnInit{
